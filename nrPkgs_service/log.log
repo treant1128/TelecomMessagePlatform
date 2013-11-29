@@ -1,0 +1,2876 @@
+展示号码包文件服务 Listening: 8084
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 1
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+-----RequestGetDir------
+Receive Request: 2
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 3
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 4
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 5
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 6
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 7
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 8
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 9
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 10
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 11
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 12
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 13
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 14
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 15
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+-----RequestGetDir------
+Receive Request: 16
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 17
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+-----RequestGetDir------
+Receive Request: 18
+subDir: March
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+[ { name: 'forgedNumber7',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber7.txt',
+    lines: 8 },
+  { name: 'forgedNumber8',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber8.txt',
+    lines: 10 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 19
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 20
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 21
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 22
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 23
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 24
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 25
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 26
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 27
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 28
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 29
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 30
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 31
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 32
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 33
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 34
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 35
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 36
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 37
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 38
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 39
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+-----RequestGetDir------
+Receive Request: 40
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 41
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 42
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+-----RequestGetDir------
+Receive Request: 43
+subDir: March
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+[ { name: 'forgedNumber7',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber7.txt',
+    lines: 8 },
+  { name: 'forgedNumber8',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber8.txt',
+    lines: 10 } ]
+-----RequestGetDir------
+Receive Request: 44
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+-----RequestGetDir------
+Receive Request: 45
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+-----RequestGetDir------
+Receive Request: 46
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 47
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: '',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+展示号码包文件服务 Listening: 8084
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 1
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+-----RequestGetDir------
+Receive Request: 2
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 3
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 4
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 5
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 6
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 7
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 8
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+-----RequestGetDir------
+Receive Request: 9
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+-----RequestGetDir------
+Receive Request: 10
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+-----RequestGetDir------
+Receive Request: 11
+subDir: March
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+[ { name: 'forgedNumber7',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber7.txt',
+    lines: 8 },
+  { name: 'forgedNumber8',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber8.txt',
+    lines: 10 } ]
+-----RequestGetDir------
+Receive Request: 12
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+展示号码包文件服务 Listening: 8084
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1127:5)
+    at Object.<anonymous> (/home/node/zjdx_msg/nrPkgs_service/server_nrPkg.js:14:8)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+error: Forever detected script exited with code: 8
+
+/usr/local/lib/node_modules/forever/node_modules/forever-monitor/node_modules/broadway/node_modules/eventemitter2/lib/eventemitter2.js:283
+          throw arguments[1]; // Unhandled 'error' event
+                         ^
+Error: Cannot stop process that is not running.
+    at /usr/local/lib/node_modules/forever/node_modules/forever-monitor/lib/forever-monitor/monitor.js:332:26
+    at process._tickCallback (node.js:415:13)
+展示号码包文件服务 Listening: 8084
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 1
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 2
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 3
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 4
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 5
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 6
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 7
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 8
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 9
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 10
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 11
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 12
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 13
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 14
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 15
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 16
+subDir: March
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+[ { name: 'forgedNumber7',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber7.txt',
+    lines: 8 },
+  { name: 'forgedNumber8',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber8.txt',
+    lines: 10 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 17
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 18
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 19
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 20
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 21
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 22
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 23
+subDir: April
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+[ { name: 'forgedNumber9',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April/forgedNumber9.txt',
+    lines: 12 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 24
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 25
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 26
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 27
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 28
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 29
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 30
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 31
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 32
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 33
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 34
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 35
+subDir: January
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+[ { name: 'forgedNumber2',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber2.txt',
+    lines: 1 },
+  { name: 'forgedNumber1',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber1.txt',
+    lines: 1 },
+  { name: 'forgedNumber3',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January/forgedNumber3.txt',
+    lines: 6 } ]
+-----RequestGetDir------
+Receive Request: 36
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 37
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 38
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 39
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 40
+subDir: March
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+[ { name: 'forgedNumber7',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber7.txt',
+    lines: 8 },
+  { name: 'forgedNumber8',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March/forgedNumber8.txt',
+    lines: 10 } ]
+-----RequestGetDir------
+Receive Request: 41
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 42
+subDir: February
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+[ { name: 'forgedNumber5',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber5.txt',
+    lines: 8 },
+  { name: 'forgedNumber4',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber4.txt',
+    lines: 7 },
+  { name: 'forgedNumber6',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February/forgedNumber6.txt',
+    lines: 9 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+-----RequestGetDir------
+Receive Request: 43
+subDir: scpFromJSLT
+SubDirAbsPath: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+[ { name: 'TC-NT-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-NT-10',
+    lines: 23940 },
+  { name: 'TC-10-G',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-G',
+    lines: 7133 },
+  { name: 'TC-10-100',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-10-100',
+    lines: 34118 },
+  { name: 'TC-XZ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-XZ-10',
+    lines: 103260 },
+  { name: 'TC-ZJ-10',
+    path: '/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT/TC-ZJ-10',
+    lines: 40403 } ]
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10
+根目录下所有子文件夹: April,February,January,March,scpFromJSLT
+根目录下第0个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April
+根目录下第1个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February
+根目录下第2个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January
+根目录下第3个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March
+根目录下第4个子文件夹路径: /home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/April的Children:------forgedNumber9.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/February的Children:------forgedNumber4.txt,forgedNumber5.txt,forgedNumber6.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/January的Children:------forgedNumber1.txt,forgedNumber2.txt,forgedNumber3.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/March的Children:------forgedNumber7.txt,forgedNumber8.txt
+第二层下/home/node/zjdx_msg/nrPkgs_service/forgedNumbers/scpFromJSLT的Children:------TC-10-100,TC-10-G,TC-NT-10,TC-XZ-10,TC-ZJ-10

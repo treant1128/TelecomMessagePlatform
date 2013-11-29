@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html;charset=GBK">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.png">
+
+    <title>后台号码包添加</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="bootstrap/bootstrap-switch.css" rel="stylesheet" type="text/css"> 
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/jumbotron-narrow.css" rel="stylesheet"> 
+
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-switch.min.js"></script>
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">主页</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">联系方式</a></li>
+        </ul>
+        <h3 class="text-muted">微视窗-添加任务</h3>
+      </div>
+	  <br>
+	  <span></span>
+	  
+	  <div class="alert alert-block alert-danger fade in">
+		  <button type="button" class="close" data-dismiss="alert">x</button>
+		  <p class="alert-heading">暂时只提供活动推广版块任务的下发!</p>
+	  </div>
+
+	  <table width="100%" class="infoForm">
+			<tr>
+				<td class="tdL">选择文件：</td>
+				<td class="tdR">
+					<select name="filePath" id="filePath">     
+					</select> 
+					<span style="margin-left:5px;color:#FF7F00;"><code>（选择已分类的号码包）</code></span>
+					<div id="numDiv"></div>
+					<div id="numFileTip" style="width:250px;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdL">&nbsp;</td>
+				<td class="tdM">&nbsp;</td>
+			</tr>
+		
+			<tr>
+				<td class="tdL">&nbsp;</td>
+				<td class="tdM">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdL">下发分类：</td>
+				<td class="tdR">
+					<input type="radio" name="smsTask.sendTimeType" id="send_status0" value="A"  checked="checked"/>活动推广&nbsp;&nbsp;
+					<input type="radio" name="smsTask.sendTimeType" id="send_status1" value="B" />电子账单&nbsp;&nbsp;
+					<input type="radio" name="smsTask.sendTimeType" id="send_status2" value="N" />消费通知&nbsp;&nbsp;
+		      		</td>
+			</tr>
+			
+			<tr>
+				<td class="tdL">&nbsp;</td>
+				<td class="tdM">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdL">下发标题：</td>
+				<td class="tdR">
+					<input id="msgTitle" style="width: 400px" name="send_title" id="sendTitle" maxlength="100" type="text"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdL">&nbsp;</td>
+				<td class="tdM">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdL">下发内容：</td>
+				<td class="tdR">
+ 					<textarea id="msgContent" style="width: 400px" rows="15" type="text"></textarea>
+				</td>
+			</tr>
+		
+		</table>
+		
+	<hr></hr>
+	<div>
+	<!-- 必须为loading 负责没有disabled状态  -->
+	<button type="button" id="btn_submit" data-loading-text="处理中 ~~" data-success-text="任务完成!!" class="btn btn-lg btn-primary" style="text-align:center; MARGIN-RIGHT:200px; MARGIN-LEFT:260px;">
+		<span class="glyphicon glyphicon-cloud-upload"></span>  提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+	</div>
+      <div class="footer">
+        <p style="text-align: center;">China Telecom. Copyright &copy;2013. All rights reserved.</p>
+      </div>
+
+    </div> <!-- /container -->
+	
+	</body>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var g_dirs=[];
+			var templete="<option></option>";
+			
+			$.get('/zjdx/nrpkg/getDirs', function(data){
+					console.log(data);
+				g_dirs=eval(data);
+				console.log(g_dirs);
+				for(var i=0; i<g_dirs.length; i++){
+				templete+="<option value="+g_dirs[i].name+">"+g_dirs[i].name+"  {"+g_dirs[i].count +"}"+"</option>";
+				}
+				
+				//把对象转为对象
+				jQuery("#filePath").empty();
+				jQuery("#filePath").append(templete);
+			});  //End of Get
+
+			$("#filePath").change(function(){
+				$("#numDiv").html("");
+				var fp=$("#filePath").val();
+				if(fp == "")  return;    //选最上边的空   不用再浪费post
+
+				$.post('/zjdx/nrpkg/subDirDetails', 
+					{"subDirName":fp},
+					function(data){
+						
+						if(data==null||fp.length==0){
+							return;
+						}else{
+							console.log(data);
+							var numHtml="";
+							$.each(data, function(idx, item){
+								numHtml+='<span style="width:160px; display:inline-block;"><input dadinggou="cbx_'
+								+ idx
+								+ '" value="'
+								+ item.path
+								+ '" type="checkbox">'
+								+ item.name
+								+ ' ['
+								+ item.lines
+								+ ']</span>';
+		//				numHtml +="<div class='make-switch switch-mini' id='"
+		//			       	+"switch_"
+		//		       		+idx
+		// 				+"' fuckWhat='"
+		//			        +item.path
+		//				+"' data-on-label='Yes' data-off-label='No'><input type='checkbox' checked='checked' value='"
+		//				+item.path
+		//				+"'/></div>" 
+		//				+ item.name 
+		//				+'  [' 
+		//				+ item.lines 
+		//				+ ']  ';
+						});
+
+//						numHtml += numHtml;   //多造几个   测试
+						$("#numDiv").html(numHtml);
+//						console.log($('#numDiv')[0].innerHTML);
+	
+					console.log($("[dadinggou^='cbx']"));
+					//经查API发现这个create函数  不用invoke源码了	
+				$("[dadinggou^='cbx']").each(function(index){
+					console.log($(this).val());
+ 					$(this).wrap('<div class="make-switch switch-small" dadinggou="switch_"'
+					 		+ index
+							+ '" fuckWhat="'
+						        + $(this).val()
+//					       		+ '" data-on-label="<i class=\'icon-ok icon-white\'></i>" data-off-label="<i class=\'icon-remove\'></i>">').parent().bootstrapSwitch();		
+					+ '" data-on-label="<span class=\'glyphicon glyphicon-ok\'></span>" data-off-label="<span class=\'glyphicon glyphicon-remove\'></span>">').parent().bootstrapSwitch();		
+				});
+				
+					setTimeout(function(){
+			//			$("[dadinggou^='switch']").bootstrapSwitch('toggleState'); //Justfor joke
+						$("[dadinggou^='switch']").bootstrapSwitch('setState', true);
+					}, 1000);
+
+					}  //End of If
+				});  //End of Post
+			});  //End of Change
+
+
+			$("#btn_submit").click(function(){
+				var noneSelect = false;
+				var nrPkgs = new Array;
+				$("[dadinggou^=switch]").each(function(){
+					//只要有一个是true, 那|= 结果就是true
+					noneSelect |= $(this).bootstrapSwitch('status');
+					if($(this).bootstrapSwitch('status')){
+						nrPkgs.push($(this).attr('fuckWhat'));
+					}
+					console.log($(this).bootstrapSwitch('status'));
+				});
+
+				if(!noneSelect){
+					alert('请至少选择一个号码包!');
+					return;
+				}
+						
+				var t =  $("#msgTitle").val().trim();
+				if(t === ''){
+					alert('请输入下发标题!');
+					return;
+				}
+				
+				var c = $("#msgContent").val().trim();
+				if(c === ''){
+					alert('请输入下发内容!');
+					return;
+				}
+				console.log(nrPkgs);
+
+				var btn = $(this);
+				btn.button('loading');
+
+				var prefix = 'N';
+				$.post('/zjdx/back/addMultiMission',
+				       	{name : '持之以恒', prefix : prefix, msgContent : t + "*!-_-!*" + c, nrPkgs : nrPkgs},
+				       	function(data){
+						console.log(data);
+						setTimeout(function(){
+							btn.button('success');	
+							window.location.reload();
+						}, 2222);
+					});
+			});
+
+		});  //End of Ready		
+	</script>
+</html>

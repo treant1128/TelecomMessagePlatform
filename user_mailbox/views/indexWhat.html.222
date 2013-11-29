@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html ng-app="zjdx_msg">
+  <head>
+    <meta charset="GBK">
+    	<title>浙江 &middot; 电信</title>
+	<link href="assets/css/application.css" media="screen, print" rel="stylesheet"stylesheet>
+    	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style type="text/css">
+	    .sidebar-nav {
+		    padding: 9px 0;
+	    }
+
+	    @media (max-width: 980px) {
+		    /* Enable use of floated navbar text */
+		    .navbar-text.pull-right {
+			    float: none;
+			    padding-left: 5px;
+			    padding-right: 5px;
+		    }
+	    }
+
+	    /* Remove border and change up box shadow for more contrast */
+	    .navbar .navbar-inner {
+		    border: 0;
+		    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		    -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		    box-shadow: 0 2px 10px rgba(0,0,0,.25);
+	    }
+
+	    /* Downsize the brand/project name a bit */
+	    .navbar .brand {
+		    padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+		    font-size: 16px;
+		    font-weight: bold;
+		    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	    }
+
+	    .carousel .container {
+
+		    margin-top : 5px;
+		    position: relative;
+		    z-index: 9;
+	    }
+	    .carousel img {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    min-width: 100%;
+	    }
+
+	    .carousel-inner {
+		    margin-top:40px;
+	    }
+
+	    .carousel-caption {
+		    background-color: transparent;
+		    position: static;
+		    max-width: 550px;
+		    padding: 0 10px;
+		    margin-left: 180px;
+		    margin-top: 30px;
+	    }
+
+	    .carousel-control {
+		    height: 80px;
+		    margin-top: 0;
+		    font-size: 100px;
+		    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+		    background-color: transparent;
+		    border: 0;
+		    z-index: 10;
+	    }
+
+	    .carousel-caption h1,
+	    .carousel-caption .lead {
+		    margin: 0;
+		    line-height: 1.25;
+		    color: #fff;
+		    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    }
+
+	    .navbar-search{
+		    padding-top: 5px;		
+	    }	
+
+
+
+.accordion {
+	width: 480px;
+	border-bottom: solid 1px #c4c4c4;
+}
+.column .liBody div {
+	background: #fff url(assets/img/arrow-square.gif) no-repeat right -300px;
+	padding: 7px 15px;
+	margin: 0;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	border: solid 1px #c4c4c4;
+	border-bottom: none;
+	cursor: pointer;
+}
+.column .liBody div :hover {
+	background-color: #e3e2e2;
+}
+.column .liBody div .active {
+	background-position: right 5px;
+}
+.column .liBody p {
+	background: #77f7f7;
+	margin: 0;
+	padding: 10px 15px 20px;
+	border-left: solid 1px #c4c4c4;
+	border-right: solid 1px #c4c4c4;
+}
+
+    </style>
+  </head>
+
+  <body>
+<!-- Use TaskController -->
+<div ng-controller="TasksController">
+	<div id="container">
+		    <div class="navbar navbar-inverse navbar-fixed-top">
+	  		<div class="navbar navbar-inverse" style="position: static;">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  
+                  <div class="nav-collapse collapse navbar-inverse-collapse">
+                    
+                    
+                    <form class="navbar-search pull-left" action="entryAction!toSearch" method="post">
+                      <input type="text" class="search-query span5" 
+                      		name="property" placeholder="请输入搜索内容...">
+                    </form>
+					<ul class="nav">
+                      <li class="divider-vertical"></li>
+					  <li class="divider-vertical"></li>
+                      <a class="brand" href="index.jsp" style="margin-left:0px">搜索</a>
+					  <li class="divider-vertical"></li>
+                      <li class="divider-vertical"></li>
+                      
+                    </ul>
+                    <ul class="nav pull-right"> 
+                      <li class="divider-vertical"></li>
+		      <a class="brand" id="phone" href="#">欢迎您&nbsp;&lt;&nbsp;<%=phoneNumber%>&nbsp;&gt;</a>
+                      <li class="divider-vertical"></li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+    </div>
+
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="assets/img/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>巅峰让利</h1>
+              <span class="btn btn-primary" style="margin-left:200px" href="#">Sign up now</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>节前钜惠</h1>
+              <a class="btn  btn-primary" style="margin-left:200px" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>真情回馈</h1>
+              <a class="btn btn-primary" style="margin-left:200px" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <div class="container-fluid">
+		<div class="site-content" id="js-pjax-container" data-pjax-container="">
+	<div class="site-container js-site-container" data-url="/thomaspark/4394162/forks">
+<div class="gist container">
+  <div class="root-pane">
+  <div class="menu-container">
+    <ul class="menu gisttabs">
+      <li>
+        <a>
+          当前业务
+	  <span class="counter">未读/总数</span>
+        </a>
+      </li>
+
+        <li>
+          <a ng-click="loadMenu('A')" class="selected">
+           活动推广
+	   <span class="counter">{{AunreadedCount}} / {{A.length}}</span>
+          </a>
+        </li>
+
+        <li class="revision-count">
+          <a ng-click="loadMenu('B')">
+           电子账单 
+	   <span class="counter">{{BunreadedCount}} / {{B.length}}</span>
+          </a>
+        </li>
+
+        <li>
+          <a ng-click="loadMenu('N')">
+           消费通知
+	   <span class="counter">{{NunreadedCount}} / {{N.length}}</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="column">
+    <ul class="forkers user-list">
+	<li ng-repeat="task in tasks" ng-click="clickItem(task.msgContent)" class="liBody">
+		<div>
+		<!-- use ng-src instead src <- GET 404 not found -->
+		<img ng-src="assets/img/{{task.thumbnail}}.png" width="22" height="35">
+	    	<a>{{task.msgCode}}</a> 
+	 	<em>({{task.msgContent | extractContent}})</em>    
+	    	<span class="actions">
+			<span class="status-modified">{{task.score | elapsedSoFarFilter}}</span> 
+			<a class="minibutton">
+				<span class="octicon octicon-git-branch"></span>
+				{{task.isReaded | isReadedFilter}}
+			</a>
+		</span>
+		</div>
+       		<p ng-show='false'>{{task.msgContent}}</p>
+    	</li>
+
+    </ul> <!--forkers user-list-->
+
+ <ul class="pager">
+   <li><a href="#" ng-click = 'changePage(-1)'>上一页</a></li>
+   <li><a>第&nbsp;{{currentPage}}/{{totalPages}}&nbsp;页</a></li>
+   <li><a href="#" ng-click = 'changePage(1)'>下一页</a></li>
+ </ul>
+
+
+  </div> <!--column-->
+ 
+
+</div> <!--gist container-->
+
+<div class="context-overlay"></div>
+</div> <!--site-container-->
+</div> <!--site-content-->
+</div> <!--container-fluid-->
+
+<footer>
+    <div id="footer">
+  <div class="container clearfix">
+
+    <p class="right">China Telecom. Copyright &copy;2013. All rights reserved.</p>
+    <p class="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p class="right">【浙ICP备12014759号-1】</p>
+    <ul id="legal">
+      <li><a href="mailto:support@github.com">服务支持</a></li>
+      <li><a href="https://github.com/contact">关于我们</a></li>
+    </ul>
+
+  </div><!-- /.container -->
+</div><!-- /.#footer -->
+
+  </footer>
+
+	<script src="assets/js/jquery.min.js"></script>
+    	<script src="assets/js/bootstrap-transition.js"></script>
+	<script src="assets/js/bootstrap-carousel.js"></script>
+	<script src = "bootstrap/js/bootstrap.min.js"></script>
+	<script src = "assets/js/angular.min.js"></script>
+	<script src = "assets/js/angular-resource.min.js"></script>
+	<script src = "assets/js/angular-toggle-switch.js"></script>
+	<script src = "tasks.js"></script>
+
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+ </div>  <!-- End of TasksController -->
+  </body>
+</html>
+
