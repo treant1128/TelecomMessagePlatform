@@ -366,3 +366,56 @@ var _markReaded = function(phoneNumber, score, msgCode, callback){
 
 exports.markReaded = _markReaded;
 
+var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
+	 console.log('###############**************');
+	if(phoneNumber.constructor === String && msgContents.constructor === Array
+			&& (prefix === 'A' || prefix === 'B' || prefix === 'N')){
+//--Content Style---
+//"15356455511|-_-|868673|-_-|7243313312300001|-_-|12|-_-||-_-||-_-|<?xml version=\"1.0\" encoding=\"utf-8\"?><respone><ErrCode>0000</ErrCode><ErrMsg>e???????Y?????????</ErrMsg></respone>|-_-|1|-_-|1|-_-|20131121104933|-_-|20131121122053|-_-|15356455511_1385002172936|-_-|rate_move|-_-|1477|-_-|2192"
+		var score = timeUtil.getElapsedMinutesSince();
+		console.log('@@@@@@@@@@@@@********');
+		async.waterfall([
+			function(water1st){
+				var count = 0;
+ 				var code_scoreForContent = new Array();
+
+				async.whilst(
+					function(){ return count < msgContents.length; },
+					function(cycle){
+						async.waterfall([
+							function(cb){
+								_getMsgCodeByContent(msgContents[count], prefix, function(msgCode){
+									cb(null, msgCode);
+								});
+							},
+							function(code, cb){
+								_setMsgCodeContentHash(code, msgContents[count], function(detail){
+								        cb(null, code);
+								});
+							}	
+						], function(err, msgCode){
+							count++;
+							code_scoreForContent.push(score);	
+							code_scoreForContent.push(msgCode);
+							cycle();
+						}); //End of asynd.waterfall
+					},
+					function(err){
+						code_scoreForContent.unshift(phoneNumber + UNREADED_FLAG);
+						water1st(null, code_scoreForContent);
+					}
+				); //End of async.whilst
+			},
+			function(scores_codesArray, water2nd){
+				client.ZADD(scores_codesArray, function(err, result){
+					water2nd(null, result);
+				});
+			}		
+		], function(err, result){
+			ccbb(result);
+		}); //End of  outer async.waterfall	
+	}
+};
+
+exports.multiMsgsToOnePhone = _multiMsgsToOnePhone;
+

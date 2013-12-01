@@ -129,3 +129,69 @@ app.post('/insertSingleTask', function(req, res){
 	}
 });
 
+//----------------dnode----------------
+var dnode = require('dnode');
+var checkBill = require('./oracle.js').checkBill;
+
+var dnodeServer = dnode({
+	retrieveOracle : function(phoneNumber, prefix, callback){
+		if(phoneNumber.constructor === String){
+			async.waterfall([
+				function(cb){
+					checkBill(phoneNumber, function(userLogs){
+						console.log('badk_admin里的userLogs结果********');
+						console.log(userLogs);
+						cb(null, userLogs);
+					});		
+				},
+				function(logs, cb){
+					if(logs != null && logs.constructor === Array){
+						var msgContents = new Array();
+						var temp = new Array();
+//---Log Style---
+// { USERID: '15356455511',
+//   ORDERID: '868673',
+//   PROM_NUM: '7243313312300001',
+//   PROM_TYPE: '12',
+//   OLD_PROM_NUM: null,
+//   OLD_PROM_TYPE: null,
+//   RESULT: '<?xml version="1.0" encoding="utf-8"?><respone><ErrCode>0000</ErrCode><ErrMsg>e???????Y?????????</ErrMsg></respone>',
+//   RET: '1',
+//   STATUS: '1',
+//   CREATE_TIME: '20131121104933',
+//   UPDATE_TIME: '20131121122053',
+//   GLOBAL_KEY: '15356455511_1385002172936',
+//   FROM_ID: 'rate_move',
+//   RATE_USE: '1477',
+//   RATE_REMAIN: '2192' }
+						for(o in logs){
+							for(g in logs[o]){
+								temp.push(logs[o][g]);
+							}
+console.log('-----------temp------------');
+console.log(temp);
+							//Array join成String相比String+  减少对象创建
+							msgContents.push(temp.join('|-_-|'));    //push String to msgContents
+							temp.splice(0, temp.length);             //clear temp array
+						}
+
+						cb(null, msgContents);
+					}
+				},	
+				function(contents, cb){
+					console.log('去Redis执行了)))))))))))))))))))))');
+					redis.multiMsgsToOnePhone(phoneNumber, contents, prefix, function(result){
+						cb(null, result);
+					});
+				}
+			], function(err, result){
+				console.log('回来了到达了');
+				console.log(result);
+				callback(result);
+			});
+		}	
+	}
+});
+
+dnodeServer.listen(port * 2);
+

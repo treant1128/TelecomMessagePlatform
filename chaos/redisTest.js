@@ -3,15 +3,10 @@ var redis  = require("redis"),
     set_size = 20,
     multi = client.multi();
 
- client.HINCRBY('treantKey', 'treantField', 138, function(err, result){
- 	client.HGETALL('treantKey', function(err, r){
-		console.log(r);
-		var o = r.treantField;
-		console.log(o.constructor);
-		console.log(o);
-	});
- });
-
+client.select(8);
+client.ZADD(['sortedSet', 123, 'abc', 456, 'mnt', 789, 'ddg'], function(err, result){
+	console.log(result);
+});
 //    var v = false;
 //    console.log(v?'是1成了':'是0不成');
 ////    client.HGETALL('zjdx_msg:hash_pool:key', function(err, result){

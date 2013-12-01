@@ -54,41 +54,46 @@ app.get('/', function(req, res){
   	
 	phoneNumber = '15356455511';
 
-//	redis.isNebie(phoneNumber, function(result){
-//		if(result){
+	var dnode = require('dnode');
+	var d = dnode.connect(8082 * 2);
+	d.on('remote', function(remote){
+		remote.retrieveOracle(phoneNumber, 'N', function(result){
+			console.log('userMail手打的打了的'+result.constructor);
+//			res.send(result);
+			res.send(JSON.stringify(result));
+			d.end();
+		});
+	});
+
+
+
+	return;
+	///////////////////////////////
+	redis.isNebie(phoneNumber, function(result){
+		if(result){ 			//nebie
 		
-//		}else{
+		}else{ 				//veteran
 			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
-			setInterval(function(){
-				console.log("Log after reder ...");
-			}, 1000);
-//		}
+		}
 	
-//	});
-//	async.waterfall([
-//		function(callback){
-//			checkBill(phoneNumber, function(result){
-//				callback(null, result);
-//			});
-//		},
-//		
-//		function(result, callback){
-//			if(result){
-//				callback(null, result);
-//			}
-//		}
-//	], function(err, result){
-//		res.send(JSON.stringify(result[0])); return;
-//
-//		res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
-//	}); //End of async.series
-//	res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
+	});
  });
 
 
 function retrieveOraceUpdateRedis(phoneNumber){
-
-
+	async.waterfall([
+		function(cb){
+			checkBill(phoneNumber, function(result){
+				cb(null, result);
+			});
+		},
+		function(userBills, cb){
+			//	参照back_admin中的app.post('/insertSingleTask'
+		//	打丁狗打丁狗		
+		},
+	], function(err, result){
+			
+	}); //End of async.waterfall
 };
 
 app.post('/init', function(req, res){
