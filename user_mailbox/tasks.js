@@ -36,7 +36,10 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 		var descri = '未知...';
 		if(score !== undefined){
 			var p =  _getElapsedMinutesSince() - parseInt(score, 10);
-		        if(p < minutesPerHour){
+
+			if(p < 0){
+				descri = '刚才...';
+			}else if(p >= 0 && p < minutesPerHour){
                        		descri = p + '分钟前...';
 		        }else if(p >= minutesPerHour && p < minutesPerDay){
 		                descri = Math.floor(p / minutesPerHour) + '小时前...';
@@ -51,10 +54,10 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 	};
 }).filter('isReadedFilter', function(){
 	return function(isReaded){
-		return isReaded ? '已读': '未读';
+		return isReaded ? '已读' : '未读';
 	}
 }).filter('composeIdByContent', function(){
-	//Simple Hash for identify
+	//Simple Hash just for identify
 	return function(str){
 		var hash = 0;
     		for (i = 0; i < str.length; i++) {
@@ -225,7 +228,7 @@ $scope.clickItem = function(msgContent){
 
 //向服务器请求 变未读为已读， 用户有可能在请求返回前切换menu， 必须传入点击时的$scope.currentMenu，而不能以请求返回时的$scope.currentMenu作为基准
 function asyncServerIsReaded(phoneNumber, score, msgCode, menu){
-	alert('修改未读为已读' + phoneNumber + '--' + score + '--' + msgCode);
+//	alert('修改未读为已读' + phoneNumber + '--' + score + '--' + msgCode);
 	$http({
 		url  	:  '/zjdx/markReaded',
 		method 	:  'POST',
@@ -233,7 +236,7 @@ function asyncServerIsReaded(phoneNumber, score, msgCode, menu){
 	})
 	.success(function(data){
 		console.log(data);
-		alert('成功返回值为：' + data);
+		console.log('成功返回值为：' + data);
 		$scope[menu + 'unreadedCount']--;  //左边menu的unreadedCount数量等请求正确返回后再更新
 	})
 	.error(function(data){
@@ -272,7 +275,7 @@ function load(menu){
 
 //换页操作
 $scope.changePage = function(step){
-	alert('换页 ' + step);
+//	alert('换页 ' + step);
 	var temp = $scope.currentPage +  parseInt(step, 10);  //calculate temp for check boundary
 
 	if(temp < 1){

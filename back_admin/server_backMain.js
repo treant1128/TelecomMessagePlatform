@@ -179,13 +179,13 @@ console.log(temp);
 					}
 				},	
 				function(contents, cb){
-					console.log('去Redis执行了)))))))))))))))))))))');
+					console.log('即将去Redis执行');
 					redis.multiMsgsToOnePhone(phoneNumber, contents, prefix, function(result){
 						cb(null, result);
 					});
 				}
 			], function(err, result){
-				console.log('回来了到达了');
+				console.log('从redis回来了...............结果在下面...');
 				console.log(result);
 				callback(result);
 			});

@@ -2,7 +2,7 @@ var redis = require('redis');
 var async = require('async');
 
 var timeUtil = require('./timeUtil.js');
-//return;
+
 ///////////////Global Const String Variable////////////////
 var SET_VETERAN_KEY = 'zjdx_msg:set_veteran:key';
 var HASH_MSG_POOL_KEY = 'zjdx_msg:hash_pool:key';
@@ -12,14 +12,14 @@ var READED_FLAG = 'R';
 var WITHSCORES_FLAG = 'WITHSCORES';
 ///////////////Global Const String Variable////////////////
 
-var client = redis.createClient(6379, '172.21.0.102', null);
+var client = redis.createClient(6379, 'db01', null);
 client.select(0);
 client.on('error', function(err){
   console.log("Error happens: " + err);
 });
 
-//用户登录后 先判断其是不是初次登录, 如果是就马上查询oracle再render, 负责内容有可能为空
-//如果不是就先render页面, 在后台查询oracle插入redis 新内容将在其下次登录后展现
+//用户登录后 先判断其是不是初次登录, 如果是就只能马上查询oracle再render, 否则内容有可能为空
+//如果不是就先render页面, 在后台查询oracle再插入redis, 新内容将在其下次登录后展现
 exports.isNebie = function(phoneNumber, callback){
 	if(phoneNumber.constructor === String){
 		client.SADD(SET_VETERAN_KEY, phoneNumber, function(err, result){
@@ -367,17 +367,16 @@ var _markReaded = function(phoneNumber, score, msgCode, callback){
 exports.markReaded = _markReaded;
 
 var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
-	 console.log('###############**************');
 	if(phoneNumber.constructor === String && msgContents.constructor === Array
 			&& (prefix === 'A' || prefix === 'B' || prefix === 'N')){
 //--Content Style---
 //"15356455511|-_-|868673|-_-|7243313312300001|-_-|12|-_-||-_-||-_-|<?xml version=\"1.0\" encoding=\"utf-8\"?><respone><ErrCode>0000</ErrCode><ErrMsg>e???????Y?????????</ErrMsg></respone>|-_-|1|-_-|1|-_-|20131121104933|-_-|20131121122053|-_-|15356455511_1385002172936|-_-|rate_move|-_-|1477|-_-|2192"
 		var score = timeUtil.getElapsedMinutesSince();
-		console.log('@@@@@@@@@@@@@********');
+
 		async.waterfall([
 			function(water1st){
 				var count = 0;
- 				var code_scoreForContent = new Array();
+ 				var U_code_scoreForContent = new Array();
 
 				async.whilst(
 					function(){ return count < msgContents.length; },
@@ -389,20 +388,37 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 								});
 							},
 							function(code, cb){
+								//如果该消息已经属于已读   就不再往未读中放
+				//				client.SISMEMBER(phoneNumber + READED_FLAG, code, function(err, result){ //这个是对Set的
+								client.ZSCORE(phoneNumber + READED_FLAG, code, function(err, result){
+									
+										console.log('果等于: '+result);
+									if(result){ 
+										err = READED_FLAG;
+										console.log('的&&&&&&&&&&&&&&&标志'+code);
+									}
+									cb(err, code);
+								});
+							},
+							function(code, cb){
 								_setMsgCodeContentHash(code, msgContents[count], function(detail){
-								        cb(null, code);
+							        	cb(null, code);
 								});
 							}	
 						], function(err, msgCode){
 							count++;
-							code_scoreForContent.push(score);	
-							code_scoreForContent.push(msgCode);
+							console.log('*******error(((((((((((');
+							console.log(err);
+							if(err !== READED_FLAG){
+								U_code_scoreForContent.push(score);	
+								U_code_scoreForContent.push(msgCode);
+							}
 							cycle();
 						}); //End of asynd.waterfall
 					},
 					function(err){
-						code_scoreForContent.unshift(phoneNumber + UNREADED_FLAG);
-						water1st(null, code_scoreForContent);
+						U_code_scoreForContent.unshift(phoneNumber + UNREADED_FLAG);
+						water1st(null, U_code_scoreForContent);
 					}
 				); //End of async.whilst
 			},

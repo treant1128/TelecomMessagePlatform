@@ -1,5 +1,6 @@
 var express = require('express');
 var async = require('async');
+var dnode = require('dnode');
 var app = express();
 
 var AES = require('../AES.js');
@@ -48,32 +49,39 @@ app.get('/', function(req, res){
     } //End of mo
   }  //End of phoneNumber == null
 
-	//  phoneNumber = 'Test123';
-	phoneNumber = '18161910619';
-	phoneNumber = '18444444444';
-  	
-	phoneNumber = '15356455511';
-
-	var dnode = require('dnode');
-	var d = dnode.connect(8082 * 2);
-	d.on('remote', function(remote){
-		remote.retrieveOracle(phoneNumber, 'N', function(result){
-			console.log('userMail手打的打了的'+result.constructor);
-//			res.send(result);
-			res.send(JSON.stringify(result));
-			d.end();
-		});
-	});
-
-
-
+	//phoneNumber = '18161910619';
+  	//
+	//phoneNumber = '15356455511';
+if(phoneNumber == null || phoneNumber == ""){
+	res.send('很抱歉, 不能解析您的手机号 ...');
 	return;
+}
 	///////////////////////////////
-	redis.isNebie(phoneNumber, function(result){
-		if(result){ 			//nebie
-		
+	redis.isNebie(phoneNumber, function(nebie){
+		if(nebie){ 			//nebie
+			console.log('-----------Yes Yes Yes------------');
+			var d = dnode.connect(8082 * 2);
+			d.on('remote', function(remote){
+				remote.retrieveOracle(phoneNumber, 'N', function(result){
+			//		res.send(JSON.stringify(result));		
+					console.log(nebie + '-----dnode result: ' + result);
+					res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
+					d.end();
+				});
+			});
 		}else{ 				//veteran
+			console.log('-----------------No No No----------------');
 			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
+			var d = dnode.connect(8082 * 2);
+			d.on('remote', function(remote){
+				remote.retrieveOracle(phoneNumber, 'N', function(result){
+			//		res.send(JSON.stringify(result));		
+					console.log(nebie + '-----dnode result: ' + result);
+					d.end();
+				});
+			});
+
+
 		}
 	
 	});
