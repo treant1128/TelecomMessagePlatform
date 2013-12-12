@@ -1,12 +1,11 @@
 var express = require('express');
 var async = require('async');
 var dnode = require('dnode');
+var _ = require('underscore');
 var app = express();
 
 var AES = require('../AES.js');
 var redis = require('../redis.js');
-var checkBill = require('./oracle.js').checkBill;
-
 
 app.use('/', express.static(__dirname + '/'));
 app.use(express.bodyParser({}));
@@ -42,7 +41,7 @@ app.get('/', function(req, res){
     var mo = req.query.mo;   //获取get请求的mo, 解密出手机号
     if(mo != null){
   	if(mo == 'debug'){
-	  phoneNumber = "18106502925";
+	  phoneNumber = "18006783900";
 	}else{
 	  phoneNumber = AES.Decrypt(mo);
 	}
@@ -52,11 +51,13 @@ app.get('/', function(req, res){
 	//phoneNumber = '18161910619';
   	//
 	//phoneNumber = '15356455511';
+
 if(phoneNumber == null || phoneNumber == ""){
-	res.send('很抱歉, 不能解析您的手机号 ...');
+	res.send('<html><head></head><body><marquee width="100%" scrollamount="2"><h1>很抱歉, 不能解析您的手机号 ...</br>请切换到CMWAP上网方式继续访问！</h1></marquee></body></html>');
 	return;
 }
 	///////////////////////////////
+    var hided = phoneNumber.substr(0, 3) + '****' + phoneNumber.substr(7);
 	redis.isNebie(phoneNumber, function(nebie){
 		if(nebie){ 			//nebie
 			console.log('-----------Yes Yes Yes------------');
@@ -65,13 +66,13 @@ if(phoneNumber == null || phoneNumber == ""){
 				remote.retrieveOracle(phoneNumber, 'N', function(result){
 			//		res.send(JSON.stringify(result));		
 					console.log(nebie + '-----dnode result: ' + result);
-					res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
+					res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
 					d.end();
 				});
 			});
 		}else{ 				//veteran
 			console.log('-----------------No No No----------------');
-			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber});
+			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
 			var d = dnode.connect(8082 * 2);
 			d.on('remote', function(remote){
 				remote.retrieveOracle(phoneNumber, 'N', function(result){
@@ -81,28 +82,10 @@ if(phoneNumber == null || phoneNumber == ""){
 				});
 			});
 
-
 		}
-	
 	});
  });
 
-
-function retrieveOraceUpdateRedis(phoneNumber){
-	async.waterfall([
-		function(cb){
-			checkBill(phoneNumber, function(result){
-				cb(null, result);
-			});
-		},
-		function(userBills, cb){
-			//	参照back_admin中的app.post('/insertSingleTask'
-		//	打丁狗打丁狗		
-		},
-	], function(err, result){
-			
-	}); //End of async.waterfall
-};
 
 app.post('/init', function(req, res){
 //	phoneNumber = '18161910619';  //Just 4 test
@@ -132,15 +115,26 @@ app.post('/getMsgContent', function(req, res){
 	});
 });
 
-app.post('/markReaded', function(req, res){
-	var phoneNumber = req.body.phoneNumber;
-	var score = req.body.score;
-	console.log(phoneNumber.constructor);
-	var msgCode = req.body.msgCode;
 
-	console.log('收到变未读为已读: ' + phoneNumber + '--' + score + '--' + msgCode);
-	redis.markReaded(phoneNumber, score, msgCode, function(results){
-		res.send(results);	
-	});
-//	res.send('你发送的是: ' + phoneNumber + '--' + score + '--' + msgCode);
+app.post('/batchMove', function(req, res){
+    var action = req.body.action;
+	var phoneNumber = req.body.phoneNumber;
+	var scores = req.body.scores;
+	var msgCodes = req.body.msgCodes;
+
+	console.log('收到的action: ' + action + '--' + phoneNumber + '--' + scores + '--' + msgCodes);
+   // return;  //Just 4 test
+    redis.batchMove(action, phoneNumber, scores, msgCodes, function(results){
+        res.send(results);    
+    }); 
+});
+
+
+app.post('/advise', function(req, res){
+    var phoneNumber = req.body.phoneNumber;
+    var advise = req.body.advise;
+//    res.send(phoneNumber + '的建议是:' + advise);    
+    redis.saveAdvise(phoneNumber, advise, function(result){
+        res.send(JSON.stringify(result));    
+    });
 });

@@ -11,7 +11,7 @@
     <title>浙江电信 &middot; 消息平台</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.0.2/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -24,6 +24,7 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <link href="onlineService.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -42,13 +43,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" id="phone" href="#">欢迎您&nbsp;&lt;<%=phoneNumber%>&gt;</a>
+              <a class="navbar-brand" id="phone" href="#" style="display:none;"><%=phoneNumber%></a>
+              <a class="navbar-brand" href="#">欢迎您&nbsp;&lt;<%=hidedPhoneNumber%>&gt;</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">主页</a></li>
+                <!--
                 <li><a href="#about">关于</a></li>
-                <li><a href="#contact">联系</a></li>
+                <li><a href="#contact">联系</a></li> 
+                -->
                </ul><!--navbar-nav-->
 	    </div><!--navbar-collapse -->
 	  </div><!--container-->
@@ -109,67 +113,142 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
-      <div class="row">
-		<div class="jumbotron tooltip-demo">
-			<ul class="nav nav-pills nav-justified">
-			  <li class="active"  ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="提示内容打丁狗tooltipi!">
+    <div class="container marketing tooltip-demo">
+			<ul class="nav nav-pills">
+                <li ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
 			  	<a id="AId" href="" data-toggle="pill">
+                    <!--
 					<span class="badge pull-right">{{AunreadedCount}} / {{A.length}}</span>
-					<span class="glyphicon glyphicon-send"></span>
+                    <span class="glyphicon glyphicon-send"></span> -->
 					活动推广
 				</a>
 			  </li>
-			  <li ng-click="loadMenu('B')">
+			  <li ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
 				<a id="BId" href="" data-toggle="pill">
+                    <!--
 					<span class="badge pull-right" data-toggle="tooltip" title="" data-original-title="未读/总共 ~~">{{BunreadedCount}} / {{B.length}}</span>
-					<span class="glyphicon glyphicon-leaf"></span>
+                    <span class="glyphicon glyphicon-leaf"></span> -->
 					电子账单
 				</a>
 			  </li>
-			  <li ng-click="loadMenu('N')">
+			  <li class="active" ng-click="loadMenu('N')" data-toggle="tooltip" title="" data-original-title="未读{{NunreadedCount}} / 总共 {{N.length}}">
 			  	<a id="MId" href="" data-toggle="pill">
+                    <!--
 					<span class="badge badge-inverse pull-right">{{NunreadedCount}} / {{N.length}}</span>
-					<span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphicon glyphicon-user"></span> -->
 					消费通知
 				</a>
 			  </li>
 			</ul>
-		<!--	
-			<div class="tab-content">
-			  <div class="tab-pane fade" id="Home1st">家在哪里??</div>
-			  <div class="tab-pane active" id="Profile2nd">Profile简介内容!!</div>
-			  <div class="tab-pane fade" id="Messages3rd">消息Handler</div>
-			</div>
-		-->	
+		
 
 	<div class="panel-group" id="accordion">
          <div class="panel panel-success" ng-repeat="task in tasks">
           <div class="panel-heading">
-	     <div class="row" ng-click="clickItem(task.msgContent)" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed">
-		     <!-- use ng-src instead src <- GET 404 not found -->
-			<img ng-src="assets/img/{{task.thumbnail}}.png" width="22" height="35"/>
-			<!--<a>{{task.msgCode}}</a>--> 
-			<code data-toggle="tooltip" title="" data-original-title="单击打开/关闭信息内容!">({{task.msgCode}}{{task.msgContent | extractContent}})</code>
-			<span href="#" class="label label-info pull-right" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="data-original-title" title="title">{{task.isReaded | isReadedFilter}}</span>
-		
-		
-			<small>({{task.score | elapsedSoFarFilter}})</small>
-		</div><!--row-->
-	  </div><!--panel-heading-->
+             <span>
+                 <input id="cbx_{{task.msgCode}}" type="checkbox" ng-click="checkItem(task.msgCode)" ng-model="task.isChecked">
+             </span>
+             <span ng-click="clickItem(task.msgContent)" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed">
+                <!-- use ng-src instead src <- GET 404 not found -->
+			    <img ng-src="assets/img/{{task.thumbnail}}.gif" width="28" height="22" margin-left="20px"/>
+			    <a>{{task.msgCode}}</a> 
+			    <code data-toggle="tooltip" title="" data-original-title="单击显示/隐藏信息内容!">{{task.msgContent | extractContent}}</code>
+			    <span href="#" ng-class="(task.isReaded) ? 'label label-info pull-right' : 'label label-warning pull-right'" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="data-original-title" title="title">{{task.isReaded | isReadedFilter}}</span>
+			    <small>({{task.score | elapsedSoFarFilter}})</small>
+        </span><!--row-->
+    </div><!--panel-heading-->
 
-	  <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse" >
-            <div class="panel-body">
-		<div class="list-group">
-			<a class="list-group-item">{{task.msgContent}}</a>
-		</div>
-            </div>
-	  </div><!--panel-collapse-->
+	            <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse" >
+                    <div class="panel-body">
+	    	            <div class="list-group">
+		    	            <a class="list-group-item">{{task.msgContent | extractOracleFields}}</a>
+		                </div>
+                    </div>
+	            </div><!--panel-collapse-->
          </div><!--panel-success-->
 	</div><!--panel-group-->
 
-	</div><!-- /.jumbotron -->
-      </div><!-- /.row -->
+<br>
+
+
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <a class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
+              选择<span>&nbsp;</span><span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-click="option(1)">
+                    <a>
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>不选</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(2)">
+                    <a>
+                        <span class="glyphicon glyphicon-fullscreen"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>全选</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(3)">
+                    <a>
+                        <span class="glyphicon glyphicon-transfer"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>反选</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+          <a class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown">
+              标记为<span>&nbsp;</span><span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-click="option(4)">
+                    <a>
+                        <span class="glyphicon glyphicon-check"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>已读</span>
+                    </a>
+                </li>
+                
+                <li ng-click="option(5)">
+                    <a>
+                        <span class="glyphicon glyphicon-paperclip"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>未读</span>
+                    </a>
+                </li>
+                <li ng-click="option(6)">
+                    <a>   
+                        <span class="glyphicon glyphicon-tree-conifer"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>全部设为已读</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(7)">
+                    <a>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>删除</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(8)">
+                    <a>   
+                        <span class="glyphicon glyphicon-fire"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>删除全部</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>  <!-- btn-justified -->
 
 	<ul class="pager">
 		<li><a href="" ng-click = 'changePage(-1)'>上一页</a></li>
@@ -185,17 +264,45 @@
       </footer>
 
     </div><!-- /.container marketing-->
-</div>  <!-- End of TasksController -->
 
+<div id="onlineService" data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)" seed="csc_kb_router_online"><img style="width:62px; height:77px; display:block;" src="assets/img/onlineService.png"></a></div>
+
+
+    <!-- sample modal content -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">请留下您遇到的问题或提出宝贵建议！</h4>
+          </div>
+
+          <div class="modal-body">
+              <textarea id="advise" style="width: 100%" rows="5" type="text"></textarea> 
+
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" ng-click='submitAdvise()'>提交</button>
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>  <!-- End of TasksController -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery-1.10.2.min.js"></script>
-    <script src="bootstrap-3.0.2/js/bootstrap.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="bootstrap-3.0.3/js/bootstrap.min.js"></script>
     <script src="holder.js"></script>
-	<script src = "assets/js/angular.min.js"></script>
-	<script src = "tasks.js"></script>
-	<script src = "assets/js/angular-toggle-switch.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="tasks.js"></script>
+	<script src="assets/js/angular-toggle-switch.js"></script>
   </body>
   
   <script>
@@ -203,29 +310,7 @@
 //		e.preventDefault()
 //		$(this).tab('show')
 //	})
-	
-	/////////
-	
-	//before the new tab has been shown
-//	$('a[data-toggle="pill"]').on('show.bs.tab', function (e) {
-//		 e.target // activated tab
-//		 console.log("before  之前");
-//		 console.log('即将激活的tab: '+e.target.innerText);
-//		 e.relatedTarget // previous tab
-//		 console.log('先前的tab: '+e.relatedTarget.innerText);
-//	});
-	
-	//after a tab has been shown.
-//	$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-//		e.target // activated tab
-//		console.log("after  之后");
-//		console.log('即将激活的tab: '+e.target.innerText);
-//		e.relatedTarget // previous tab
-//		console.log('先前的tab: '+e.relatedTarget.innerText);
 
-//		if($(e.target).attr('href') == "#Home1st") 
-//			alert($(e.target).attr('id'));
-//	});
 //////////////////////
 	$('.tooltip-demo').tooltip({
 		selector: "[data-toggle=tooltip]",
