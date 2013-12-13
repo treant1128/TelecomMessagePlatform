@@ -27,6 +27,20 @@ var formatTime = function(t){  //CREATE_TIME: '20130917215458'->'2013-09-17 21:5
 	return  t.substr(0, 4) + '-' + t.substr(4, 2) + '-' + t.substr(6, 2) + ' ' +
 		t.substr(8, 2) + ':' + t.substr(10, 2) + ':' + t.substr(12, 2);
 };
+var replaceFrom = function(from){
+    if(_.isString(from)){
+        return from.replace(/189_ToolBar_V1/, '微视窗')
+                    .replace(/189_ToolBar_V2/, '微视窗')
+                    .replace(/189_android/, '微视窗客户端')
+                    .replace(/189_toolbar/, '微视窗')
+                    .replace(/3g_JFFS/, '积分反刷')
+                    .replace(/ailixin/, '微视窗')
+                    .replace(/order_toolbar/, '微视窗')
+                    .replace(/tencent/, '腾讯管家')
+                    .replace(/wsc/, '活动页面');
+    }    
+    return "未知";
+};
 /////////////////////////////////
 var msecPerMinute = 1000 * 60;    //计算score精确到minute
 var minutesPerHour = 60;
@@ -58,7 +72,7 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 			}else{
 				content = content.split('|-_-|');
 //				return '来自' + content[12]+ '的温馨提示（' + formatTime(content[9]) + '）...';
-				return '来自' + content[12]+ '!';
+				return replaceFrom(content[12]) + '!';
 			}
 	};
 }).filter('elapsedSoFarFilter', function(){
@@ -189,7 +203,11 @@ function TasksController($scope, $http) {
 			}
 				
 		console.log($scope.tasks);
-	
+            if($scope.tasks.length === 0){
+                $("#wait").fadeIn(688);
+            }else{
+                $("#wait").hide();    
+            }	
 			cache[menu + '_' + start + '_' + end] = msgContents;//Cache Cache 减少请求次数  为了接口统一 只保存msgContent
 			console.log(cache);
 		}
@@ -258,8 +276,6 @@ $scope.clickItem = function(msgContent){
 			$scope.tasks[index] = task;
             //展开内容时 标记为已读
 			asyncAction(4, phoneNumber, [task.score], [task.msgCode], $scope.currentMenu, function(data){
-                alert(data);
-		        console.log(data);
 		        console.log('markReaded成功返回值为：' + data);
 		        $scope[$scope.currentMenu + 'unreadedCount']--;  //左边menu的unreadedCount数量等请求正确返回后再更新        
             });
@@ -391,22 +407,21 @@ $scope.checkItem = function(msgCode){
 $scope.option = function(n){
 //    alert(n); 
     if(_.isNumber(n)){
-        var temp = undefined;
         switch(n){
             case 1:         //不选
-                temp = _.map($scope.tasks, function(item){
-                        return item.isChecked = false;
-                    });
+                _.map($scope.tasks, function(item){
+                    return item.isChecked = false;
+                });
             break;
             case 2:         //全选
-                temp = _.map($scope.tasks, function(item){
-                        return item.isChecked = true;
-                    });
+                _.map($scope.tasks, function(item){
+                    return item.isChecked = true;
+                });
             break;
             case 3:         //反选
-                temp = _.map($scope.tasks, function(item){
-                        return item.isChecked = !(item.isChecked); 
-                    });
+                _.map($scope.tasks, function(item){
+                    return item.isChecked = !(item.isChecked); 
+                });
             break;
             //对选中项标记
             case 4:         //已读
@@ -419,18 +434,25 @@ $scope.option = function(n){
                     alert('您没选择任何消息噢!');
                     return;
                 }
+                
+                if(n === 7){
+                    if(!confirm('信息删除后永久隐藏, 确定继续么?'))  return;    
+                }
+
+//                alert('继续执行: ' + n);
                 console.log(selected);
-                alert(_.map(selected, function(item){ return item.msgCode; }));
+//                alert(_.map(selected, function(item){ return item.msgCode; }));
+
                 asyncAction(n, 
                     phoneNumber, 
                     _.map(selected, function(item){ return item.score; }), 
                     _.map(selected, function(item){ return item.msgCode; }), 
                     $scope.currentMenu, 
                     function(data){
-                        alert('对选中项标记返回结果' + JSON.stringify(data));    
+//                      alert('对选中项标记返回结果' + JSON.stringify(data));    
                         switch(n){          //根据不同的操作类型n  前端触发不同的逻辑
                             case 4:         //把选定的msgCode变为已读 计算出影响到的Unreaded数量
-                                alert('进入4的callback处理前端逻辑');
+//                              alert('进入4的callback处理前端逻辑');
                                 _.map(selected, function(item){
                                     return item.isReaded = true;    
                                 });
@@ -441,9 +463,16 @@ $scope.option = function(n){
                                 });
                             break;
                             case 7:         //-------删除-------
-
+//                                alert('进入7的删除完了啊callback处理前端逻辑');
+                                $scope.tasks = _.difference($scope.tasks, selected);
+                                //clear cache of current page, fetch in the subsequent refresh
+                               
+                                setTimeout(function(){
+                                    cache = {};
+                                    refreshAfterDelete();    	
+                                }, 500);
                             break;
-                            default:
+                            default:        //impossible
                                 break;
                         }
                     });
@@ -451,22 +480,72 @@ $scope.option = function(n){
             //对全部操作
             case 6:         //全部设为已读
             case 8:         //删除全部
-                alert(_.map($scope.tasks, function(item){ return item.msgCode; }));
+                 
+                if(n === 8){
+                    if(!confirm('信息删除后永久隐藏, 确定继续么?'))  return;    
+                }
+
+//                alert(_.map($scope.tasks, function(item){ return item.msgCode; }));
+                
                 asyncAction(n, 
                     phoneNumber, 
                     _.map($scope.tasks, function(item){ return item.score; }), 
                     _.map($scope.tasks, function(item){ return item.msgCode; }), 
                     $scope.currentMenu,
                     function(data){
-                        
+                        switch(n){
+                            case 6:
+                                _.map($scope.tasks, function(item){
+                                    return item.isReaded = true;
+                                });
+                            break;
+                            case 8:
+//                                alert('进入8的删除完了啊callback处理前端逻辑');
+                                $scope.tasks = [];
+                                setTimeout(function(){
+                                    cache = {};
+                                    refreshAfterDelete();    	
+                                }, 500);
+                            break;
+                            default:
+                                break;
+                        }    
                     });
             break;
             default:
                 break;
-        }
+        } //End of switch
 
-//        $scope.tasks = temp;
-    }
+    } //isNumber
 };
+
+function refreshAfterDelete(){
+ initItemsNumber(0, -1, function(data){       			//默认0 -> -1 加载全部
+		if(data !=null && data.constructor === Object){
+        	for(var p in data){  					//forEach Object
+			indiviTotalPages[p] = Math.ceil(data[p].length / ITEMS_PER_PAGE);
+			indiviCurrPage[p] = 1;                                  //default start from 1st page
+
+	        	$scope[p] = data[p]; 					//define $scope.A / $scope.B / $scope.N
+        		$scope[p + 'msgCodes'] = new Array(data[p].length);
+        		$scope[p + 'unreadedCount']  = 0;
+			for(var q in data[p]){ 				//forEach Array			
+				$scope[p + 'msgCodes'][q] = data[p][q].msgCode;  	//define $scope.AmsgCodes / $scope.BmsgCodes / $scope.NmsgCodes
+				if(!data[p][q].isReaded){
+					$scope[p + 'unreadedCount']++;
+				}
+			}	
+		}
+
+		//初始化与页面双绑的变量
+	    $scope.currentMenu = 'N';	//初始化完成后默认加载Activity的第一页
+		$scope.totalPages = indiviTotalPages[$scope.currentMenu];
+//	    $scope.currentPage = $scope.totalPages == 0 ? 0 : 1;
+
+		loadPageByParams($scope.currentMenu, ($scope.currentPage - 1) * ITEMS_PER_PAGE, 
+				$scope.currentPage * ITEMS_PER_PAGE, handleCache);
+		}
+	});
+}
 }
 

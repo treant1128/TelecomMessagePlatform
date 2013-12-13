@@ -34,7 +34,7 @@
     <div class="navbar-wrapper">
       <div class="container">
 
-	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -73,34 +73,37 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
-          <div class="container">
+            <!--<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">-->
+            <img ng-src="assets/img/flowBank.jpg"/>
+      <!--    <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
-              <p>Note:  <code>file://中华人民共和国</code> URL, ts.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <p>Note:  <code>file://链接链接链接</code> URL, ts.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">跳转abc</a></p>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
-          <div class="container">
+            <!--<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">-->
+            <img ng-src="assets/img/advMsg.jpg"/>
+      <!--    <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>广告词2222222222222222222222222.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1>标题e.</h1>
+              <p>广告词222222.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">跳转mnt</a></p>
             </div>
-          </div>
+          </div>  -->
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
-          <div class="container">
+            <!--<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">-->
+            <img ng-src="assets/img/christmas.png"/>
+       <!--   <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
               <p>说什么说什么.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">ddg跳转</a></p>
             </div>
-          </div>
+          </div>  -->
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -140,25 +143,27 @@
 				</a>
 			  </li>
 			</ul>
-		
+    <div style="text-align:center;">
+         <img id="wait" ng-src="assets/img/wait.jpg" style="width:295px; height:235px; display:none;"/>	
+    </div>
 
 	<div class="panel-group" id="accordion">
          <div class="panel panel-success" ng-repeat="task in tasks">
-          <div class="panel-heading">
-             <span>
-                 <input id="cbx_{{task.msgCode}}" type="checkbox" ng-click="checkItem(task.msgCode)" ng-model="task.isChecked">
-             </span>
-             <span ng-click="clickItem(task.msgContent)" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed">
-                <!-- use ng-src instead src <- GET 404 not found -->
-			    <img ng-src="assets/img/{{task.thumbnail}}.gif" width="28" height="22" margin-left="20px"/>
-			    <a>{{task.msgCode}}</a> 
-			    <code data-toggle="tooltip" title="" data-original-title="单击显示/隐藏信息内容!">{{task.msgContent | extractContent}}</code>
-			    <span href="#" ng-class="(task.isReaded) ? 'label label-info pull-right' : 'label label-warning pull-right'" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="data-original-title" title="title">{{task.isReaded | isReadedFilter}}</span>
-			    <small>({{task.score | elapsedSoFarFilter}})</small>
+            <div class="panel-heading">
+            <span>
+                <input id="cbx_{{task.msgCode}}" type="checkbox" ng-click="checkItem(task.msgCode)" ng-model="task.isChecked">
+            </span>
+            <span ng-click="clickItem(task.msgContent)" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed">
+            <!-- use ng-src instead src <- GET 404 not found -->
+            <img ng-src="assets/img/{{task.thumbnail}}.gif" width="28" height="22" margin-left="20px"/>
+            <a>{{task.msgCode}}</a> 
+            <code href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="">{{task.msgContent | extractContent}}</code>
+            <span href="javascript:void(0)" ng-class="(task.isReaded) ? 'label label-info pull-right' : 'label label-warning pull-right'" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="data-original-title" title="title">{{task.isReaded | isReadedFilter}}</span>
+            <small>({{task.score | elapsedSoFarFilter}})</small>
         </span><!--row-->
     </div><!--panel-heading-->
 
-	            <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse" >
+	            <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse">
                     <div class="panel-body">
 	    	            <div class="list-group">
 		    	            <a class="list-group-item">{{task.msgContent | extractOracleFields}}</a>
@@ -257,16 +262,22 @@
 	</ul>
       <hr class="featurette-divider">
 
-      <!-- FOOTER -->
+      <!-- FOOTER 
       <footer>
         <p class="pull-right"><a href="http://s.zj189.cn">【浙ICP备12014759号-1】</a></p>
-	<p>&copy; China Telecom. Copyright &copy;2013. All rights reserved.</p>
+        <p>&copy; China Telecom. Copyright &copy;2013. All rights reserved.</p>
       </footer>
+        -->
+      
+      <div class="foot"><a href="#"><font color="#fff">TOP↑</font></a>&nbsp;|&nbsp;
+          <a herf="#" data-toggle="modal" data-target="#myModal"><font color="#fff">意见反馈</font></a>
+          <br>【浙ICP备12014759号-1】<br>中国电信版权所有</div>
 
     </div><!-- /.container marketing-->
 
+    <!--
 <div id="onlineService" data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)" seed="csc_kb_router_online"><img style="width:62px; height:77px; display:block;" src="assets/img/onlineService.png"></a></div>
-
+    -->
 
     <!-- sample modal content -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
