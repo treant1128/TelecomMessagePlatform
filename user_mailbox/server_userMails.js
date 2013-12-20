@@ -28,9 +28,10 @@ app.get('/', function(req, res){
   console.log(req.query);
 
   if(req.cookies.zjsns_mobile != undefined){
-    var phone_cookies = req.cookies.zjsns_mobile;
-        phoneNumber = phone_cookies;
-  	console.log("Cookies phone: %s", phone_cookies);
+      var phone_cookie=req.cookies.zjsns_mobile;
+      console.log('加密的Coolies: ' + phone_cookie);
+      phoneNumber=AES.DecryptBase64(phone_cookie);
+      console.log("解密的手机号: %s", phoneNumber);
   }  
 
 	console.log('得到的手机号: ' + phoneNumber);
@@ -53,9 +54,14 @@ app.get('/', function(req, res){
 	//phoneNumber = '15356455511';
 
 if(phoneNumber == null || phoneNumber == ""){
-	res.send('<html><head></head><body><marquee width="100%" scrollamount="2"><h1>很抱歉, 不能解析您的手机号 ...</br>请切换到CMWAP上网方式继续访问！</h1></marquee></body></html>');
+	//res.send('<html><head></head><body><marquee width="100%" scrollamount="2"><h1>很抱歉, 不能解析您的手机号 ...</br>请切换到CMWAP上网方式继续访问！</h1></marquee></body></html>');
+    console.log('Cant resolve phoneNumber, redirect...');
+    res.redirect('http://login.zj189.cn/sso/login.jsp?goto=http://b.zj189.cn/msg/');
 	return;
 }
+
+    //解密的手机号码constructor是SlowBuffer 没有substr
+    phoneNumber = phoneNumber.toString();
 	///////////////////////////////
     var hided = phoneNumber.substr(0, 3) + '****' + phoneNumber.substr(7);
 	redis.isNebie(phoneNumber, function(nebie){

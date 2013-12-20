@@ -23,6 +23,23 @@ var types = {
 	'22'	:	'一次性流量包10元800M'
 };
 
+ //---Log Content 字段---
+ // { USERID: '15356455511',     --------------------------------   0
+ //   ORDERID: '868673',         --------------------------------   1
+ //   PROM_NUM: '7243313312300001',   ---------------------------   2
+ //   PROM_TYPE: '12',           --------------------------------   3
+ //   OLD_PROM_NUM: null,        --------------------------------   4
+ //   OLD_PROM_TYPE: null,       --------------------------------   5
+ //   RESULT: '<?xml version="1.0" encoding="utf-8"?><respone><ErrCode>0000</ErrCode><ErrMsg>e???????Y?????????</ErrMsg></respone>',    6
+ //   RET: '1',                  --------------------------------   7
+ //   STATUS: '1',               --------------------------------   8
+ //   CREATE_TIME: '20131121104933',  ---------------------------   9
+ //   UPDATE_TIME: '20131121122053',  ---------------------------   10
+ //   GLOBAL_KEY: '15356455511_1385002172936',  -----------------   11
+ //   FROM_ID: 'rate_move',      --------------------------------   12
+ //   RATE_USE: '1477',          --------------------------------   13
+ //   RATE_REMAIN: '2192' }      --------------------------------   14
+
 var formatTime = function(t){  //CREATE_TIME: '20130917215458'->'2013-09-17 21:54:58'
 	return  t.substr(0, 4) + '-' + t.substr(4, 2) + '-' + t.substr(6, 2) + ' ' +
 		t.substr(8, 2) + ':' + t.substr(10, 2) + ':' + t.substr(12, 2);
@@ -37,7 +54,10 @@ var replaceFrom = function(from){
                     .replace(/ailixin/, '微视窗')
                     .replace(/order_toolbar/, '微视窗')
                     .replace(/tencent/, '腾讯管家')
-                    .replace(/wsc/, '活动页面');
+                    .replace(/wsc_newer/, '新入网活动')
+                    //以后有什么活动wsc后面会加后缀区分的
+                    .replace(/wsc/, '圣诞节活动')
+;
     }    
     return "未知";
 };
@@ -48,7 +68,7 @@ var minutesPerDay = minutesPerHour * 24;
 var minutesPerWeek = minutesPerDay * 7;
 var minutesPerHour = 60;
 var DEFAULT_BEGIN_TIME = '10/31/2013 21:50:54';   //全局的公元时间起点, 必须和timeUtil.js一致
-//计算score的方法   当前距离begin过去多少分钟?   copy的timeUtil.js的, 没有找到js调用js文件的方法
+//计算score的方法  当前距离begin过去多少分钟? copy的timeUtil.js的, 没有找到js调用js文件的方法
 var _getElapsedMinutesSince = function(begin){
 	if(begin === undefined){
 		begin = DEFAULT_BEGIN_TIME;
@@ -64,15 +84,31 @@ var _getElapsedMinutesSince = function(begin){
 ///////////////////////////////////
 
 var myApp = angular.module('zjdx_msg', ['toggle-switch'])
-.filter('extractContent', function(){
+.filter('extractContent', function(){               //根据内容抽取标题
 	return  function(content){
 			content = content.toString();
+            //如果indexOf === lastIndexOf 那么: 1. 不包含(都为-1); 2. 只含有一个(指向同一个index)
 		  	if(content.indexOf('|-_-|') === content.lastIndexOf('|-_-|')){
 				return content.split('*!-_-!*')[0];   //back_admin中的flag是: *!-_-!*
-			}else{
+			}else{                      
 				content = content.split('|-_-|');
 //				return '来自' + content[12]+ '的温馨提示（' + formatTime(content[9]) + '）...';
-				return replaceFrom(content[12]) + '!';
+                switch(content[8]){
+                    case '1':
+				        content = '来自' + replaceFrom(content[12]) + '!';
+                        break;
+                    case '2':
+                        content = '订单' + content[1] + '被拒绝!';
+                        break;
+                    case '3':
+                        content = '订单' + content[1] + '超时!';
+                        break;
+                    default:
+                        content = '温馨提示';
+                        break;
+                }
+
+                return content;
 			}
 	};
 }).filter('elapsedSoFarFilter', function(){
@@ -117,8 +153,22 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 		}
 
 		content = content.split('|-_-|');
-		return '尊敬的' + content[0] + '用户， 您已于' + formatTime(content[9]) + '通过' 
-		+ content[12]+ '平台成功订购' + types[content[3]] + '套餐（订单编号：' + content[1]  + '）！';
+        switch(content[8]){
+            case '1':
+		        content = '尊敬的' + content[0] + '用户， 您已于' + formatTime(content[9]) + '通过' + replaceFrom(content[12]) + '成功订购' + types[content[3]] + '套餐（订单编号：' + content[1]  + '）！';
+                break;
+            case '2':
+		        content = '尊敬的' + content[0] + '用户， 您于' + formatTime(content[9]) + '通过' + replaceFrom(content[12]) + '提交的' + types[content[3]] + '套餐订单（编号：' + content[1]  + '）暂时被拒绝！';
+                break;
+            case '3':
+		        content = '尊敬的' + content[0] + '用户， 您于' + formatTime(content[9]) + '通过' + replaceFrom(content[12]) + '提交的' + types[content[3]] + '套餐订单（编号：' + content[1]  + '）已超时！';
+                break;
+            default:
+                content = '暂时不能获取信息内容, 请稍后重试！';
+                break;
+        }
+
+        return content;
 	};
 });
 
@@ -194,15 +244,27 @@ function TasksController($scope, $http) {
 			//Redis的SortedSet中原生只保存了msgCode和score两种属性  Hash中保存了msgCode和msgContent
 			$scope.tasks = null;
 			$scope.tasks = $scope[menu].slice(start, end);
-	
+	        
+            var statuses = _.map(msgContents, function(item){
+                            return item.split('|-_-|')[8];
+                        }); 
+            console.log(statuses);
+
 			for(var i=0; i<$scope.tasks.length; i++){
 				$scope.tasks[i].msgContent = msgContents[i];
-				$scope.tasks[i].打丁狗 = '巨魔';
-				$scope.tasks[i].thumbnail = menu;
+				$scope.tasks[i].statusOK = statuses[i] === '1';
+                //根据status改变图标???
+                var s = msgContents[i].split('|-_-|')[8];
+				$scope.tasks[i].thumbnail = menu + (s === '1' ? '' : (s === '2' ? '_reject' : '_clock'));
                 $scope.tasks[i].isChecked = false;    //起始都是未选中状态
 			}
 				
 		console.log($scope.tasks);
+        //for(t in $scope.tasks){
+        //    console.log($scope.tasks[t]['msgContent'].split('|-_-|'));
+        //    console.log('Status: ' +$scope.tasks[t]['msgContent'].split('|-_-|')[8]);
+        //}
+
             if($scope.tasks.length === 0){
                 $("#wait").fadeIn(688);
             }else{
@@ -230,7 +292,7 @@ function TasksController($scope, $http) {
 				
 				if(queryMsgCodes.length > 0){
 					$http({
-						url    : '/zjdx/getMsgContent',
+						url    : '/msg/getMsgContent',
 						method : 'POST',
 						data   : {'msgCodes' : queryMsgCodes}
 					})
@@ -250,7 +312,7 @@ function TasksController($scope, $http) {
 	//start 和 end根据决定Redis的获取个数 默认 0 ～ -1选择全部
 	function initItemsNumber(start, end, callback){
 	        $http({
-	        	url    : '/zjdx/init',
+	        	url    : '/msg/init',
 	          	method : 'post',
 	        	data   : {'phoneNumber' : phoneNumber, 'start' : start, 'end' : end}
 	        })
@@ -297,7 +359,7 @@ $scope.clickItem = function(msgContent){
 function asyncAction(action, phoneNumber, scores, msgCodes, menu, callback){
 //	alert('修改状态' + action + '--' + phoneNumber + '--' + score + '--' + msgCode);
 	$http({
-		url  	:  '/zjdx/batchMove',
+		url  	:  '/msg/batchMove',
 		method 	:  'POST',
 		data   	:  {'action' : action, 'phoneNumber' : phoneNumber, 'scores' : scores, 'msgCodes' : msgCodes}
 	})
@@ -371,14 +433,14 @@ $scope.submitAdvise = function(){
     if(ad == null || ad == '')  { 
         alert('请添加文字哦!');
     }else{
-        alert(ad);
+//        alert('输入的内容: ' + ad);
         
         $http({
-		    url  	:  '/zjdx/advise',
+		    url  	:  '/msg/advise',
 		    method 	:  'POST',
 		    data   	:  {'phoneNumber' : phoneNumber, 'advise' : ad}
 	    }).success(function(data){
-            alert(data);
+//            alert('lrange返回的list size: ' + data);
             $("#myModal").modal('hide');
         }).error(function(data){
             $("#myModal").modal('hide');

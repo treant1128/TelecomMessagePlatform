@@ -35,3 +35,21 @@ var _Decrypt=function(mo){
 }
 
 exports.Decrypt=_Decrypt;
+
+var SKEY2    = new Buffer("0123456789abcdef", "binary");
+// 使用CBC模式，需要一个向量iv，可增加加密算法的强度
+var IVSTR2   = new Buffer("0123456789abcdef", "binary");
+
+var _DecryptBase64 = function(mo){
+    var dStr = new Buffer(mo, 'base64');
+//    console.log(dStr);
+
+    var Decipher=crypto.createDecipheriv("aes-128-cbc", SKEY2, IVSTR2);
+    Decipher.update(dStr);
+    var phone = Decipher.final();
+    console.log("PhoneNumber is: %s", phone);
+    return phone;
+};
+
+exports.DecryptBase64 = _DecryptBase64;
+

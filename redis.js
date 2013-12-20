@@ -9,6 +9,7 @@ var HASH_MSG_POOL_KEY = 'zjdx_msg:hash_pool:key';
 //var SET_MSG_POOL_KEY = 'zjdx_msg:setpool:key';
 var UNREADED_FLAG = 'U';
 var READED_FLAG = 'R';
+var DELETE_FLAG = 'D';
 var WITHSCORES_FLAG = 'WITHSCORES';
 var LIST_ADVISE_KEY = 'zjdx_msg:list_advise:key';
 ///////////////Global Const String Variable////////////////
@@ -168,11 +169,11 @@ var _getUserInfo = function(phoneNumber, start, end, callback){
 				o = o.concat(flagZRANGEResultWithIsReaded(p, result[p]));
 //				o[p] = analyzeZRANGEResults(result[p]);
 			}
-			console.log('----------Before QuickSort-------------');
-			console.log(o);
-			console.log('^^^^^^^^^^After QuickSort^^^^^^^^^^^^^^^');
+//			console.log('----------Before QuickSort-------------');
+//			console.log(o);
+//			console.log('^^^^^^^^^^After QuickSort^^^^^^^^^^^^^^^');
 			quickSortByScore(o, 0, o.length - 1);
-			console.log(o);
+//			console.log(o);
 			o = typeSortedObjArray(o);
 			console.log('#############After typeSorted#############');
 			console.log(o);
@@ -361,13 +362,13 @@ function composeScoreMsgCodeArray(scores, msgCodes){
 };
 exports.queryMsgContents = _queryMsgContents;
 
-var markAsReaded = function(action, phoneNumber, scores, msgCodes, callback){   //标记为已读
+var markAsReaded = function(phoneNumber, scores, msgCodes, callback){     //标记为已读: U->R
     async.parallel({
         "RemoveFromU"  :    function(cb){           //ZREM key meber [member ...]
-                                //不能在这里操作msgCodes 会影响到并行执行的下一个函数 
-                                //必须clone一个临时变量   直接=也不行 那是reference
+                            //不能直接修改msgCodes 会影响parallel中的其它函数  指向同一个arguments的引用 
+                            //必须clone一个临时变量   直接=也不行 是传reference不是value
                                 var argsU = _.clone(msgCodes);
-                                argsU.unshift(phoneNumber + UNREADED_FLAG);
+                                argsU.unshift(phoneNumber + UNREADED_FLAG);  //第一个是SortedSet的key
                                 client.ZREM(argsU, function(err, result){
                                     cb(err, result);    
                                 });
@@ -390,37 +391,93 @@ var markAsReaded = function(action, phoneNumber, scores, msgCodes, callback){   
     }); //End of async.parallel
 };
 
+var markAsUnreaded = function(phoneNumber, scores, msgCodes, callback){    //标记为未读: R->U
+    async.parallel({
+        "RemoveFromR"   :   function(cb){
+                                var argsR = _.clone(msgCodes);
+                                argsR.unshift(phoneNumber + READED_FLAG);  //返回length 不能chain
+                                //Non existing members are ignored.
+                                client.ZREM(argsR, function(err, result){
+                                    cb(err, result);    
+                                });
+                            },
+        "AddToU"        :   function(cb){
+                                var argsU = composeScoreMsgCodeArray(scores, msgCodes);
+                                argsU.unshift(phoneNumber + UNREADED_FLAG);
+                                
+                                client.ZADD(argsU, function(err, result){
+                                    cb(err, result);    
+                                });
+                            }
+    }, function(err, result){
+        console.log('markAsUnreaded的结果' + JSON.stringify(result));
+        callback(result);
+    }); //End of async.parallel
+};
+
+var deleteItem = function(phoneNumber, scores, msgCodes, callback){    //标记为删除: U/R->D
+    async.parallel({
+        "RemoveFromU"   :   function(cb){
+                                var argsU = _.clone(msgCodes);
+                                argsU.unshift(phoneNumber + UNREADED_FLAG);
+                                client.ZREM(argsU, function(err, result){
+                                    cb(err, result);    
+                                });
+                            },
+        "RemoveFromR"   :   function(cb){
+                                var argsR = _.clone(msgCodes);
+                                argsR.unshift(phoneNumber + READED_FLAG);
+                                client.ZREM(argsR, function(err, result){
+                                    cb(err, result);    
+                                });
+                            },
+        "AddToD"        :   function(cb){
+                                var argsD = composeScoreMsgCodeArray(scores, msgCodes);
+                                argsD.unshift(phoneNumber + DELETE_FLAG);
+                                //其实Delete没必要是SortedSet, List Set都可以, 复用之需
+                                client.ZADD(argsD, function(err, result){
+                                    cb(err, result);    
+                                });
+                            }
+    }, function(err, result){
+        console.log('deleteItem的结果' + JSON.stringify(result));
+        callback(result);
+    }); //End of async.parallel
+
+};
 var _batchMove= function(action, phoneNumber, scores, msgCodes, callback){
     if(_.isNumber(action) && _.isString(phoneNumber) && _.isArray(scores) && _.isArray(msgCodes)){
 	    switch(action){
             case 4:         //已读
-                markAsReaded(action, phoneNumber, scores, msgCodes, function(result){
+            case 6:         //全部设为已读
+                markAsReaded(phoneNumber, scores, msgCodes, function(result){
                     callback(result);    
                 });
             break;
             case 5:         //未读
-                markAsUnreaded(action, phoneNumber, scores, msgCodes, function(result){
+                markAsUnreaded(phoneNumber, scores, msgCodes, function(result){
                     callback(result);    
                 });
             break;
             case 7:         //删除
-                deleteItem(action, phoneNumber, scores, msgCodes, function(result){
-                    callback(result);    
-                });
-            break;
-            case 6:         //全部设为已读
-                markAllAsReaded(action, phoneNumber, scores, msgCodes, function(result){
-                    callback(result);    
-                });
-            break;
             case 8:         //删除全部
-                deleteAllItems(action, phoneNumber, scores, msgCodes, function(result){
+                deleteItem(phoneNumber, scores, msgCodes, function(result){
                     callback(result);    
                 });
             break;
+            //case 6:         //全部设为已读
+            //    markAllAsReaded(phoneNumber, scores, msgCodes, function(result){
+            //        callback(result);    
+            //    });
+            //break;
+            //case 8:         //删除全部
+            //    deleteAllItems(phoneNumber, scores, msgCodes, function(result){
+            //        callback(result);    
+            //    });
+            //break;
             default:
+                callback([]);
                 break;
-        
         }    
     }else{
         callback('Something wrong with the Parameters...');    
@@ -450,28 +507,39 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 									console.log("cccccccccccccccccccccccccc-------"+msgCode);
 									cb1(null, msgCode);
 								});
-							},     //先根据内容去Hash中挂号
+							},     //先根据内容去Hash中"挂号"
 							function(code, cb2){
-								//如果该msgCode已存在于已读或未读任意其一就err -> skip, 只有两者都不包含的才加入ZADD队列
-				//				client.SISMEMBER(phoneNumber + READED_FLAG, code, function(err, result){ //这个是对Set的
-								//已读和未读绝对不会有交集
+								//如果该msgCode已存在于R/U/D任意其一就err -> skip, 只有三者都不包含的才加入ZADD队列
+								//已读/未读/删除绝不会有交集  因为所有的操作都是原子性
 								async.parallel([
+
 									function(pcb){
 										client.ZSCORE(phoneNumber + UNREADED_FLAG, code, function(err, result){
-											if(result) err = READED_FLAG;
+                                            console.log('------------Unreaded的结果--------'+err+'--'+result);
+											if(result)  err = UNREADED_FLAG;
 											pcb(err, code);
 										});
 									},
 									function(pcb){
 										client.ZSCORE(phoneNumber + READED_FLAG, code, function(err, result){
-											if(result) err = READED_FLAG;
+                                            console.log('------------Readed的结果--------'+err+'--'+result);
+											if(result)  err = READED_FLAG;
 											pcb(err, code);
 										});
-									}   	//并行中任意一个err都会使得cb2传入err!=null -> 直接进入waterfall的callback
+									},
+                                    function(pcb){
+                                        client.ZSCORE(phoneNumber + DELETE_FLAG, code, function(err, result){
+                                            console.log('------------删除Delete的结果--------'+err+'--'+result);
+                                            if(result)  err = DELETE_FLAG;
+											pcb(err, code);
+                                        });
+                                    }   //并行中任意一个err(score存在)都会立即cb2传入err!=null -> 直接进入waterfall的callback
 								], function(err, result){
-										//只有前面err == null，才继续执行_setMsgCodeContentHash	
+										//只有前面err == null，才不会中断waterfall  继续执行_setMsgCodeContentHash	
 									cb2(err, code);  	
-								}); //end of async.parallel  并行判断msgCode是否存在于 已读/未读 任意其一
+								}); //end of async.parallel     parallel判断msgCode是否存在于 已读/未读/删除 任意其一
+                                //If member does not exist in the sorted set, or key does not exist, nil is returned
+				                //client.SISMEMBER(phoneNumber + READED_FLAG, code, function(err, result){ //这个是对Set
 							},
 							function(code, cb3){
 								console.log("bbbbbbbbbbbbbbbbbbb-------"+code);
@@ -482,24 +550,24 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 						], function(err, msgCode){
 							count++;
 							console.log('*******error########'); 	console.log(err);
-							if(err !== READED_FLAG){
+							if(err === null){  //err === U/R/D 表示已存在
 								U_code_scoreForContent.push(score);	
 								U_code_scoreForContent.push(msgCode);
 							}
 							cycle();
-						}); //End of async.waterfall
-					},  			//循环体中筛选出需要新增到未读中的msgCode
+						}); //End of inner async.waterfall
+					},  			//循环体中筛选出要新增到未读中去的msgCode
 					function(err){
 						U_code_scoreForContent.unshift(phoneNumber + UNREADED_FLAG);     //SortedSet key
 						water1st(null, U_code_scoreForContent);
 					}
-				); //End of async.whilst  循环遍历从Oracle获取到后转换的每一个LogContent
+				); //End of async.whilst  循环遍历从Oracle获取的.转换后的每一个LogContent
 			},
 			function(scores_codesArray, water2nd){
 				console.log(scores_codesArray.length + '新增内容' + scores_codesArray);
 				if(scores_codesArray.length > 1){
 					client.ZADD(scores_codesArray, function(err, result){
-						water2nd(null, result);
+						water2nd(err, result);
 					});
 				}else{
 					water2nd(null, '新增为空。。。');
@@ -507,7 +575,7 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 			}		
 		], function(err, result){
 			ccbb(result);
-		}); //End of  outer async.waterfall  获取score—code一一对应的  然后ZADD进 未读SortedSet	
+		}); //End of outer async.waterfall  获取score—code一一对应的  然后ZADD进 未读SortedSet	
 	}
 };
 
@@ -515,7 +583,7 @@ exports.multiMsgsToOnePhone = _multiMsgsToOnePhone;
 
 exports.saveAdvise = function(phoneNumber, advise, cb){
     if(_.isString(phoneNumber) && _.isString(advise)){
-        client.LPUSH(LIST_ADVISE_KEY, phoneNumber + '|' + advise, function(err, result){
+        client.LPUSH(LIST_ADVISE_KEY, phoneNumber + '|' + new Date().toLocaleString() + '|' + advise, function(err, result){
             if(err) throw err;
             cb(result);
         });
