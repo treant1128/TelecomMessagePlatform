@@ -1,0 +1,15 @@
+#onlineService{display:inline;position:fixed;_position:absolute;z-index:991;top:88px;right:0}
+.foot {color:#fff; background:#08559e; padding:5px; height:71px; overflow:hidden; text-align:center; line-height:23px;}
+
+
+#loading {
+    background:url("../assets/img/ajax-loader-msg.gif") no-repeat;
+    position: fixed;
+    z-index:1000;
+    height: 235px; 
+    width: 245px;
+    left: 30%;
+    top: 30%;
+    margin: auto;
+}
+

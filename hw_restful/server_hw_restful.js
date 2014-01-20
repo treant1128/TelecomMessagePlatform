@@ -26,12 +26,12 @@ var verify = function(p){
 
 app.post('/', function(req, res){
     var phoneNumber = req.body.phoneNumber;
-    console.log('收到号码: ' + phoneNumber);
+    console.log('Receive: ' + phoneNumber);
 
     if(phoneNumber != null && phoneNumber.constructor === String){
         var o = new Object();
         phoneNumber = verify(phoneNumber);
-        console.log('解析的手机号码:' + phoneNumber);
+//        console.log('解析的手机号码:' + phoneNumber);
         if(phoneNumber){
             client.multi()
             .ZCARD(phoneNumber + 'U')       //Unreaded
@@ -45,12 +45,12 @@ app.post('/', function(req, res){
                     o['Result'] = null;
                     res.send(o);
                 }else{
-                    console.log(replies);
+//                    console.log(replies);
                     replies = _.map(replies, function(item){
                             return item ? item : 0;
                         });
                     o['Result'] = _.object(['Unreaded', 'Readed', 'Deleted', 'AccessSuccess', 'AccessFailure'], replies);
-                    console.log(o);
+//                    console.log(o);
                     res.send(o);
                 }
             });
@@ -63,11 +63,11 @@ app.post('/', function(req, res){
 });
 
 
-//app.get('/:phoneNumber', function(req, res){
+app.get('/', function(req, res){
 //	console.log(req);
 //	var p = req.params.phoneNumber;
 //	console.log(req.route.params);
 //	console.log( p);
-//	res.send('输入的号码为: ' + p);
-//});
-//
+	res.send('请用Post请求携带手机号码访问!!');
+});
+

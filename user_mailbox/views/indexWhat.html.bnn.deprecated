@@ -32,8 +32,7 @@
   <body class="back">
 <!-- Use TaskController -->
 <div ng-controller="TasksController">
-
-    <div id="loading"></div> <!-- loading gif  -->
+    <div id="loading"> </div> <!-- loading gif  -->
 
     <div class="navbar-wrapper">
       <div class="container">
@@ -49,11 +48,9 @@
                   </button>-->
                   
                   <!--此处为新添内容-->
-                   <!--<span class="goback"><a href="javascript:history.go(-1);"><img src="assets/img/goback.png"></a></span>-->
-                   <span class="goback"><a href="javascript:history.go(-1);">&lt; &lt;返回</a></span>
+                   <span class="goback"><a href="javascript:history.go(-1);"><img src="assets/img/goback.png"></a></span>
                   <span class="xxzx">消息中心</span>
-                   <!--<span class="gb_home"><a href="http://s.zj189.cn"><img src="assets/img/home.png"></a></span>-->
-                   <span class="gb_home"><a href="http://s.zj189.cn">主页&gt; &gt;</a></span>
+                   <span class="gb_home"><a href="http://s.zj189.cn"><img src="assets/img/home.png"></a></span>
                    
                  
                  
@@ -102,41 +99,41 @@
     <div class="container marketing tooltip-demo mainbox" style="margin-top:20px;"><!--margin-top remedy carousel-->
             <ul class="nav nav-pills navbox">
                 <li class="active"  ng-click="loadMenu('N')" data-toggle="tooltip" title="" data-original-title="未读{{NunreadedCount}} / 总共 {{N.length}}">
-                <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{NunreadedCount}}</span>-->
-                    <a id="AId" href="" data-toggle="pill">
-
-                        <!-- <span class="glyphicon glyphicon-send"></span> -->
-                        <h4><font style="font-weight:bold;">消费通知<sup ng-show="showOrHide(NunreadedCount)">●</sup></font></h4>
-                    </a>
-                </li>
-                <li ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
-                <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{BunreadedCount}}</span>-->
-                    <a id="BId" href="" data-toggle="pill">
-                    
-                        <!-- <span class="glyphicon glyphicon-leaf"></span> -->
-                        <h4><font style="font-weight:bold;">电子账单<sup ng-show="showOrHide(BunreadedCount)">●</sup></font></h4>
-                    </a>
-                </li>
-                <li ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
-                <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{AunreadedCount}}</span>-->
-                    <a id="MId" href="" data-toggle="pill">
-                        
-                        <!-- <span class="glyphicon glyphicon-user"></span> -->
-                        <h4><font style="font-weight:bold;">活动推广<sup ng-show="showOrHide(AunreadedCount)">●</sup></font></h4>
-                    </a>
-                </li>
+                <a id="AId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge pull-right">{{AunreadedCount}} / {{A.length}}</span>
+                    <span class="glyphicon glyphicon-send"></span> -->
+                    <h4><font style="font-weight:bold;">消费通知</font></h4>
+                </a>
+              </li>
+              <li ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
+                <a id="BId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge pull-right" data-toggle="tooltip" title="" data-original-title="未读/总共 ~~">{{BunreadedCount}} / {{B.length}}</span>
+                    <span class="glyphicon glyphicon-leaf"></span> -->
+                    <h4><font style="font-weight:bold;">电子账单</font></h4>
+                </a>
+              </li>
+              <li ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
+                <a id="MId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge badge-inverse pull-right">{{NunreadedCount}} / {{N.length}}</span>
+                    <span class="glyphicon glyphicon-user"></span> -->
+                    <h4><font style="font-weight:bold;">活动推广</font></h4>
+                </a>
+              </li>
             </ul>
     <div style="text-align:center;">
          <img id="wait" ng-src="assets/img/wait.jpg" style="width:295px; height:235px; display:none;"/> 
     </div>
 
-    <div class="panel-group cont_main">
-       <div id="ngShowTasks" ng-show="contentLoaded" style="visibility:hidden ">
+    <div class="panel-group cont_main" id="accordion">
+       <div id="ngShowTasks" ng-show="contentLoaded" style="visibility:hidden "> 
          <div ng-repeat="task in tasks" class="panel panel-success cont" style="margin-top:0px;">
             <span style="float:left;">
                 <input id="cbx_{{task.msgCode}}" type="checkbox" ng-click="checkItem(task.msgCode)" ng-model="task.isChecked">
             </span>
-            <div ng-click="clickItem(task.msgContent)" class="panel-heading panel-headinga  hangline" data-toggle="collapse" data-parent="#ngShowTasks" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapse" style="padding-left:10px;padding-right:2px;padding-top:0px;padding-bottom:12px;background:none;">
+            <div ng-click="clickItem(task.msgContent)" class="panel-heading panel-headinga  hangline" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed" style="padding-left:10px;padding-right:2px;padding-top:0px;padding-bottom:12px;background:none;">
             
                 <span>
                     <!-- use ng-src instead src <- GET 404 not found -->
@@ -152,22 +149,19 @@
 
             <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse">
                 <div class="panel-body" style="border-top:none;">
-                    <div class='list-group-item' style='background:none;border:1px solid #808080'>
-                        <div ng-show="{{task.msgContent | hasImage}}"><img src="{{task.msgContent | extractImageSrc}}", width="100%", height="100%"/></div>
-                        <!-- 此处使用Angular ngSanitize module 内置的linky filter也有效果 -->
-                        <div ng-bind-html="deliberatelyTrustDangerousSnippet('{{task.msgContent | extractOracleFields}}')"></div>
-                        <!-- <div ng-bind-html="{{task.msgContent | unsafe}}">{{task.msgContent | extractOracleFields}}</div> -->
+                    <div class="list-group list-group">
+                        <a class="list-group-item" style="background:none;border:1px solid #808080">{{task.msgContent | extractOracleFields}}</a>
                     </div>
                 </div>
             </div><!--panel-collapse-->
          </div><!--panel-success-->
-       </div><!-- ng-show parent of toggle collapse-->
+       </div><!-- ng-show -->
     </div><!-- panel-group -->
 
     <div class="btn-group dropup btn-group-justified biaoji">
         <div class="btn-group">
           <a class="btn btn-sm dropdown-toggle xuanze" data-toggle="dropdown">
-              <font style="font-weight:bold;font-size:14px;color:#ffffff;">选择</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
+              <font style="font-weight:bold;font-size:18px;color:#ffffff;">选择</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
           </a>
             <ul class="dropdown-menu" role="menu">
                 <li ng-click="option(1)">
@@ -198,7 +192,7 @@
 
         <div class="btn-group">
           <a class="btn btn-sm dropdown-toggle biaojiw" data-toggle="dropdown">
-              <font style="font-weight:bold;font-size:14px;color:#ffffff;">标记为</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
+              <font style="font-weight:bold;font-size:18px;color:#ffffff;">标记为</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
           </a>
             <ul class="dropdown-menu" role="menu">
                 <li ng-click="option(4)">
@@ -294,7 +288,6 @@
     <script src="bootstrap-3.0.3/js/bootstrap.min.js"></script>
     <script src="holder.js"></script>
     <script src="assets/js/angular.min.js"></script>
-    <script src="assets/js/angular-sanitize.js"></script>
     <script src="tasks.js"></script>
     <script src="assets/js/angular-toggle-switch.js"></script>
   </body>

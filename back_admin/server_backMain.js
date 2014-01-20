@@ -13,7 +13,7 @@ var redis = require('../redis.js');
 
 var app = express();
 app.use('/', express.static(__dirname + '/'));
-app.use(express.bodyParser({}));
+app.use(express.bodyParser({uploadDir : './file-upload'}));
 var port = 8082;
 app.listen(port);
 console.log('后台添加号码包服务 Listening Port: ' + port);
@@ -81,11 +81,14 @@ app.post('/addMultiMission', function(req, res){
 
 	console.log(name + ' :: ' + msgContent + ' :: ' + prefix);
 	console.log("收到的号码包数组: " + nrPkgs);
+    console.log(nrPkgs.constructor);
 //暂时截获请求   Just 4 Test	
-//	res.send(name + ' :: ' + msgContent + ' :: ' + prefix+" --收到的号码包数组: " + nrPkgs);
-//	return;
+    if((nrPkgs.toString().indexOf("18006783900") === -1) && (nrPkgs.toString().indexOf("13376817631") === -1)){      //测试时的密钥  不包含'abc-mnt-ddg'的 就提前return
+	    res.send('号码还没开通: ' + name + ' :: ' + msgContent + ' :: ' + prefix+" --收到的号码包数组: " + nrPkgs);
+	    return;
+    }
 
-        assignMission(msgContent, prefix, nrPkgs, function(result){
+    assignMission(msgContent, prefix, nrPkgs, function(result){
 	   res.send(result);
 	});
 //        res.send(js_code);
@@ -129,7 +132,26 @@ app.post('/insertSingleTask', function(req, res){
 	}
 });
 
-//----------------dnode----------------
+//存储rename上传文件（图片）  可以任意格式
+app.post('/file-upload', function(req, res, next){
+    console.log("Body");
+    console.log(req.body);
+    console.log("req.files");
+    console.log(req.files);
+
+    var tmp_path = req.files.thumbnail.path;
+    var target_path = './file-upload/' + req.files.thumbnail.name;
+
+    fs.rename(tmp_path, target_path, function(err){
+        if(err) throw err;
+        fs.unlink(tmp_path, function(){
+            if(err) throw err;
+            res.send('成功上传文件到' + target_path + ', 文件大小为' + req.files.thumbnail.size + ' bytes...');
+        });
+    });
+});
+
+//----------------dnode field----------------
 var dnode = require('dnode');
 var checkBill = require('./oracle.js').checkBill;
 
@@ -164,6 +186,8 @@ var dnodeServer = dnode({
 //   FROM_ID: 'rate_move',
 //   RATE_USE: '1477',
 //   RATE_REMAIN: '2192' }
+                        console.log('消息个数: ' + logs.length);
+
 						for(o in logs){
 							for(g in logs[o]){
 								temp.push(logs[o][g]);

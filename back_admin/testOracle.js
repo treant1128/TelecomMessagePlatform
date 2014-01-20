@@ -10,11 +10,13 @@ var connectData={ "tns": connectStr, "user": "USERLOG", "password": "abc" };
 var checkBill=function(phonenumber,cb){
 oracle.connect(connectData, function(err, connection) {
 if(!err){ 
-    console.log('--------------connection----------');
+    console.log('-------------before connection----------');
     console.log(connection);
+    console.log('-------------after connection----------');
  		// selecting rows
 //connection.execute("select * FROM SNS_USER.Nav_Llorder_Log WHERE from_id in ('189_android', '189_ToolBar_V1', '189_ToolBar_V2', '189_toolbar', 'order_toolbar', 'wsc') AND status = '1' AND USERID=" + phonenumber, [], function(err, results) {
 //connection.execute("SELECT * FROM SNS_USER.Nav_Llorder_Log WHERE USERID = " + phonenumber + "AND from_id != 'rate_move' AND status = '1' ORDER BY UPDATE_TIME DESC", [], function(err, results) {
+//connection.execute("SELECT * FROM SNS_USER.Nav_Llorder_Log WHERE USERID = " + phonenumber + "AND from_id != 'rate_move' ORDER BY UPDATE_TIME DESC", [], function(err, results) {
 connection.execute("SELECT * FROM SNS_USER.Nav_Llorder_Log WHERE USERID = " + phonenumber + "AND from_id != 'rate_move' ORDER BY UPDATE_TIME DESC", [], function(err, results) {
     		if (err) {
       			console.log(err);

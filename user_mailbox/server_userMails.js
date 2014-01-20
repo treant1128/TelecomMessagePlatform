@@ -27,13 +27,17 @@ app.get('/', function(req, res){
   console.log("**********I am query parser***************");
   console.log(req.query);
 
-  if(req.cookies.zjsns_mobile != undefined){
-      var phone_cookie=req.cookies.zjsns_mobile;
-      console.log('加密的Coolies: ' + phone_cookie);
-      phoneNumber=AES.DecryptBase64(phone_cookie);
-      console.log("解密的手机号: %s", phoneNumber);
-  }  
-
+if(req.cookies.zjsns_mobile!=undefined){
+    var phone_cookie=req.cookies.zjsns_mobile;
+    if(phone_cookie.length === 11 && phone_cookie.charAt(0) === '1'){
+        console.log('%%%%%%%%%%%%%Cookie没加密###################');
+        phoneNumber = phone_cookie;
+    }else{
+        console.log('加密的Coolies: ' + phone_cookie);
+        phoneNumber=AES.DecryptBase64(phone_cookie);
+        console.log("解密的手机号: %s", phoneNumber);
+    }
+}
 	console.log('得到的手机号: ' + phoneNumber);
 
   //获取不到手机号
@@ -143,4 +147,13 @@ app.post('/advise', function(req, res){
     redis.saveAdvise(phoneNumber, advise, function(result){
         res.send(JSON.stringify(result));    
     });
+});
+
+app.get('/advise', function(req, res){
+    redis.getAdvises(function(advises){
+        advises.unshift('---------- | ------------------------------------- |--------------');
+//        advises.unshift('18006783900|Thu Jan 02 2014 17:27:44 GMT+0800 (CST)|内容');
+        advises.unshift('*手*机*号* | *************提*交*时*间************* | *建*议*内*容*');
+        res.send(advises.join("<br>"));            
+    });    
 });

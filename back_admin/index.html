@@ -10,14 +10,14 @@
     <title>后台号码包添加</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
-    <link href="bootstrap/bootstrap-switch.css" rel="stylesheet" type="text/css"> 
+    <link href="bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="bootstrap-3.0.3/bootstrap-switch.min.css" rel="stylesheet" type="text/css"> 
     <!-- Custom styles for this template -->
-    <link href="bootstrap/jumbotron-narrow.css" rel="stylesheet"> 
+    <link href="bootstrap-3.0.3/jumbotron-narrow.css" rel="stylesheet"> 
 
     <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bootstrap/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.0.3/bootstrap-switch.min.js"></script>
 </head>
 <body>
    <div class="container">
@@ -39,8 +39,8 @@
 
 	  <table width="100%" class="infoForm">
 			<tr>
-				<td class="tdL">选择文件：</td>
-				<td class="tdR">
+				<td>选择文件：</td>
+				<td>
 					<select name="filePath" id="filePath">     
 					</select> 
 					<span style="margin-left:5px;color:#FF7F00;"><code>（选择已分类的号码包）</code></span>
@@ -49,47 +49,57 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="tdL">&nbsp;</td>
-				<td class="tdM">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 		
 			<tr>
-				<td class="tdL">&nbsp;</td>
-				<td class="tdM">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="tdL">下发分类：</td>
-				<td class="tdR">
-					<input type="radio" name="smsTask.sendTimeType" id="send_status0" value="A"  checked="checked"/>活动推广&nbsp;&nbsp;
-					<input type="radio" name="smsTask.sendTimeType" id="send_status1" value="B" />电子账单&nbsp;&nbsp;
-					<input type="radio" name="smsTask.sendTimeType" id="send_status2" value="N" />消费通知&nbsp;&nbsp;
-		      		</td>
+				<td>下发分类：</td>
+				<td>
+					<input type="radio" name="taskType" value="A"  checked="checked"/>活动推广&nbsp;&nbsp;
+					<input type="radio" name="taskType" value="B" />电子账单&nbsp;&nbsp;
+					<input type="radio" name="taskType" value="N" />消费通知&nbsp;&nbsp;
+                </td>
 			</tr>
 			
 			<tr>
-				<td class="tdL">&nbsp;</td>
-				<td class="tdM">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="tdL">下发标题：</td>
-				<td class="tdR">
+				<td>下发标题：</td>
+				<td>
 					<input id="msgTitle" style="width: 400px" name="send_title" id="sendTitle" maxlength="100" type="text"/>
 				</td>
 			</tr>
 			<tr>
-				<td class="tdL">&nbsp;</td>
-				<td class="tdM">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
 			</tr>
 			<tr>
-				<td class="tdL">下发内容：</td>
-				<td class="tdR">
+				<td>下发内容：</td>
+				<td>
  					<textarea id="msgContent" style="width: 400px" rows="15" type="text"></textarea>
 				</td>
 			</tr>
 		
 		</table>
 		
-	<hr></hr>
+        <hr>
+        <div>
+            <span>是否插入图片:&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="insertImg" type="checkbox" checked class="switch" data-on-label="是" data-off-label="否"/>
+             <hr>
+                <form id="imgForm" method="post" enctype="multipart/form-data" action="/msg/admin/file-upload">
+                    <input id="seleImg" name="thumbnail" type="file"/>
+                </form>   
+            </span>
+        </div>
+	<hr>
 	<div>
 	<!-- 必须为loading 负责没有disabled状态  -->
 	<button type="button" id="btn_submit" data-loading-text="处理中 ~~" data-success-text="任务完成!!" class="btn btn-lg btn-primary" style="text-align:center; MARGIN-RIGHT:200px; MARGIN-LEFT:260px;">
@@ -106,6 +116,16 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+                var fileName = "nothing";
+                $('#insertImg').bootstrapSwitch();
+                $('#insertImg').on('switch-change', function(e, data){
+                    if($(this).bootstrapSwitch('state')){
+                        $('#seleImg').css('visibility', 'visible');
+                    }else{
+                        $('#seleImg').css('visibility', 'hidden');
+                    }    
+                });
+
 			var g_dirs=[];
 			var templete="<option></option>";
 			
@@ -128,7 +148,7 @@
 				if(fp == "")  return;    //选最上边的空   不用再浪费post
 
 				$.post('/zjdx/nrpkg/subDirDetails', 
-					{"subDirName":fp},
+					{"subDirName" : fp},
 					function(data){
 						
 						if(data==null||fp.length==0){
@@ -146,56 +166,42 @@
 								+ ' ['
 								+ item.lines
 								+ ']</span>';
-		//				numHtml +="<div class='make-switch switch-mini' id='"
-		//			       	+"switch_"
-		//		       		+idx
-		// 				+"' fuckWhat='"
-		//			        +item.path
-		//				+"' data-on-label='Yes' data-off-label='No'><input type='checkbox' checked='checked' value='"
-		//				+item.path
-		//				+"'/></div>" 
-		//				+ item.name 
-		//				+'  [' 
-		//				+ item.lines 
-		//				+ ']  ';
 						});
 
-//						numHtml += numHtml;   //多造几个   测试
 						$("#numDiv").html(numHtml);
-//						console.log($('#numDiv')[0].innerHTML);
 	
 					console.log($("[dadinggou^='cbx']"));
-					//经查API发现这个create函数  不用invoke源码了	
 				$("[dadinggou^='cbx']").each(function(index){
 					console.log($(this).val());
- 					$(this).wrap('<div class="make-switch switch-small" dadinggou="switch_"'
-					 		+ index
-							+ '" fuckWhat="'
-						        + $(this).val()
-//					       		+ '" data-on-label="<i class=\'icon-ok icon-white\'></i>" data-off-label="<i class=\'icon-remove\'></i>">').parent().bootstrapSwitch();		
-					+ '" data-on-label="<span class=\'glyphicon glyphicon-ok\'></span>" data-off-label="<span class=\'glyphicon glyphicon-remove\'></span>">').parent().bootstrapSwitch();		
+                    $(this).bootstrapSwitch();
+// 					$(this).wrap('<div class="make-switch switch-small" dadinggou="switch_'
+//					 		        + index
+//                                    + '" fuckWhat="'
+//                                    + $(this).val()
+//            + '" data-on-label="<span class=\'glyphicon glyphicon-ok\'></span>" data-off-label="<span class=\'glyphicon glyphicon-remove\'></span>">').bootstrapSwitch();		
 				});
 				
 					setTimeout(function(){
-			//			$("[dadinggou^='switch']").bootstrapSwitch('toggleState'); //Justfor joke
-						$("[dadinggou^='switch']").bootstrapSwitch('setState', true);
+                        console.log($("[dadinggou^='switch']"));
+						$("[dadinggou^='cbx']").bootstrapSwitch('setState', true);
+//						$("[dadinggou^='cbx']").bootstrapSwitch('toggleState'); //Just for joke
 					}, 1000);
 
-					}  //End of If
-				});  //End of Post
-			});  //End of Change
+					}   //End of response OK 
+				});  //End of HTTP Post
+			});  //End of filePath Change
 
 
 			$("#btn_submit").click(function(){
 				var noneSelect = false;
 				var nrPkgs = new Array;
-				$("[dadinggou^=switch]").each(function(){
+				$("[dadinggou^=cbx]").each(function(){
 					//只要有一个是true, 那|= 结果就是true
-					noneSelect |= $(this).bootstrapSwitch('status');
-					if($(this).bootstrapSwitch('status')){
-						nrPkgs.push($(this).attr('fuckWhat'));
+					noneSelect |= $(this).bootstrapSwitch('state');
+					if($(this).bootstrapSwitch('state')){
+						nrPkgs.push($(this).val());
 					}
-					console.log($(this).bootstrapSwitch('status'));
+					console.log($(this).bootstrapSwitch('state'));
 				});
 
 				if(!noneSelect){
@@ -216,19 +222,57 @@
 				}
 				console.log(nrPkgs);
 
-				var btn = $(this);
+				var prefix = $('input[name="taskType"]:checked').val();
+                if(prefix !== 'A'){
+                    alert('目前只能下发活动推广内容！');
+                    return;
+                }
+
+
+                if($('#insertImg').bootstrapSwitch('state')){
+                    console.log($('#seleImg').val());
+                    var filePath = $('#seleImg').val();
+                    if(filePath){
+                        if(filePath.indexOf('/') > -1){             //Are you play on Unix-like OS ?
+                            fileName = filePath.substr(filePath.lastIndexOf('/') + 1);
+                        }else if(filePath.indexOf('\\') > -1){      //Common Window platform | file seperator \
+                            fileName = filePath.substr(filePath.lastIndexOf('\\') + 1);
+                        }else{                                      //flag for nothing
+                            fileName = "nothing";
+                        }
+
+                        $('#imgForm').submit(
+                        );
+                    }else{
+                        alert('请选择要插入的图片文件！');
+                        return;
+                    }
+                }
+
+
+//                return;    //Just 4 Test
+                
+                var btn = $(this);
 				btn.button('loading');
 
-				var prefix = 'N';
-				$.post('/zjdx/back/addMultiMission',
-				       	{name : '持之以恒', prefix : prefix, msgContent : t + "*!-_-!*" + c, nrPkgs : nrPkgs},
+                $.post('/msg/admin/addMultiMission',
+				       	{
+                            fileName   : fileName, 
+                            prefix     : prefix, 
+                            // 前端Angular的extractImageSrc filter取值逻辑是matches[0] 对所有资源都去match
+                            // 为了获取到img的src      fileName必须放在c前面  防止c中含有http链接时会顶替img位置
+                            // 为了匹配正则完全  URL两端必须留一空格
+                            msgContent : t + "*!-_-!*" + (fileName == 'nothing' ? '' : ' http://b.zj189.cn/msg/admin/file-upload/' + fileName + ' ') + c,  
+                            nrPkgs     : nrPkgs
+                        },
 				       	function(data){
-						console.log(data);
-						setTimeout(function(){
-							btn.button('success');	
-							window.location.reload();
-						}, 2222);
-					});
+                            alert(JSON.stringify(data));
+                            console.log(data);
+                            setTimeout(function(){
+                                btn.button('success');	
+                                window.location.reload();
+                            }, 2222);
+                });
 			});
 
 		});  //End of Ready		

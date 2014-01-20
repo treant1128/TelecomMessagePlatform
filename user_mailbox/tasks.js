@@ -44,24 +44,11 @@ var formatTime = function(t){  //CREATE_TIME: '20130917215458'->'2013-09-17 21:5
 	return  t.substr(0, 4) + '-' + t.substr(4, 2) + '-' + t.substr(6, 2) + ' ' +
 		t.substr(8, 2) + ':' + t.substr(10, 2) + ':' + t.substr(12, 2);
 };
-var replaceFrom = function(from){
-    if(_.isString(from)){
-        return from.replace(/189_ToolBar_V1/, '微视窗')
-                    .replace(/189_ToolBar_V2/, '微视窗')
-                    .replace(/189_android/, '微视窗客户端')
-                    .replace(/189_toolbar/, '微视窗')
-                    .replace(/3g_JFFS/, '积分反刷')
-                    .replace(/ailixin/, '微视窗')
-                    .replace(/order_toolbar/, '微视窗')
-                    .replace(/tencent/, '腾讯管家')
-                    .replace(/wsc_newer/, '新入网活动')
-                    //以后有什么活动wsc后面会加后缀区分的
-                    .replace(/wsc/, '圣诞节活动')
-;
-    }    
-    return "未知";
-};
+
+
+
 /////////////////////////////////
+var TOTAL_LENGTH = 10;
 var msecPerMinute = 1000 * 60;    //计算score精确到minute
 var minutesPerHour = 60;
 var minutesPerDay = minutesPerHour * 24;
@@ -81,9 +68,14 @@ var _getElapsedMinutesSince = function(begin){
 		return 0;
 	}
 };	
+
 ///////////////////////////////////
 
-var myApp = angular.module('zjdx_msg', ['toggle-switch'])
+function showNGContent(){
+    $("[id^='ngShow']").css("visibility", "visible");    
+};
+
+var myApp = angular.module('zjdx_msg', ['toggle-switch', 'ngSanitize'])
 .filter('extractContent', function(){               //根据内容抽取标题
 	return  function(content){
 			content = content.toString();
@@ -95,20 +87,20 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 //				return '来自' + content[12]+ '的温馨提示（' + formatTime(content[9]) + '）...';
                 switch(content[8]){
                     case '1':
-				        content = '来自' + replaceFrom(content[12]) + '!';
+				        content = '来自' + replaceFrom(content[12]);
                         break;
                     case '2':
-                        content = '订单' + content[1] + '被拒绝!';
+                        content = '订单' + content[1] + '被拒绝';
                         break;
                     case '3':
-                        content = '订单' + content[1] + '超时!';
+                        content = '订单' + content[1] + '超时';
                         break;
                     default:
                         content = '温馨提示';
                         break;
                 }
-
-                return content;
+  
+                return content + _produceDash(content);
 			}
 	};
 }).filter('elapsedSoFarFilter', function(){
@@ -149,7 +141,7 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 }).filter('extractOracleFields', function(){
 	return function(content){
 		if(content.indexOf('|-_-|') === content.lastIndexOf('|-_-|')){
-      			return content;   //back_admin中的flag是: *!-_-!*
+      			return renderLink(content.split('*!-_-!*')[1]);   //back_admin中的flag是: *!-_-!*
 		}
 
 		content = content.split('|-_-|');
@@ -170,9 +162,79 @@ var myApp = angular.module('zjdx_msg', ['toggle-switch'])
 
         return content;
 	};
-});
+}).filter('unsafe', function($sce){
+    return function(val){
+        return $sce.trustAsHtml(val);    
+    };    
+}).filter('hasImage', function(){
+    return function(content){
+        return content.indexOf("jpg") > -1 || content.indexOf("png") > -1 || content.indexOf("gif") > -1 || content.indexOf("bmp") > -1;
+    };
+}).filter('extractImageSrc', function(){
+    return function(content){
+        var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+        var matches = content.match(urlRegex);
+        return matches === null ? "" : (matches.length === 0 ? "" : matches[0]);    
+    };    
+})
+.config(function($sceProvider) {
+      // Completely disable SCE.  For demonstration purposes only!
+      //   // Do not use in new projects.
+      $sceProvider.enabled(false);
+});;
 
-function TasksController($scope, $http) {
+function replaceFrom(from){
+    if(_.isString(from)){
+        return from.replace(/189_ToolBar_V1/, '微视窗')
+                    .replace(/189_ToolBar_V2/, '微视窗')
+                    .replace(/189_android/, '微视窗客户端')
+                    .replace(/189_toolbar/, '微视窗')
+                    .replace(/3g_JFFS/, '积分反刷')
+                    .replace(/ailixin/, '微视窗')
+                    .replace(/order_toolbar/, '微视窗')
+                    .replace(/tencent/, '腾讯管家')
+                    .replace(/wsc_newer/, '新入网活动')
+                    //以后有什么活动wsc后面会加后缀区分的
+                    .replace(/wsc/, '圣诞节活动')
+;
+    }    
+    return "未知";
+};
+
+function _produceDash(content){    
+    console.log('content的长度: ' + content.length);
+    var lenOfOrderId = 0;
+    if(content.indexOf('被拒绝') > -1){
+        lenOfOrderId = content.indexOf('被') - 2;   //'订单'.length === 2   
+    }else if (content.indexOf('超时') > -1){
+        lenOfOrderId = content.indexOf('超') - 2;    
+    }
+//    console.log('lenOfOrderId:  ' + lenOfOrderId);
+    var  remedy = TOTAL_LENGTH + lenOfOrderId / 2  - content.length;   //订单数字占的宽度为数字的一半     需要弥补
+    var s = '';
+    for(var i=0; i<remedy; i++){
+        s += ' -';    
+    }
+    return s;
+}
+
+//使用了Angular ngSanitize module 内置的linky  暂时弃用
+function renderLink(text){
+    var rawText = text.toString().trim();
+    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    
+    return rawText.replace(urlRegex, function(url) {
+    
+        if ( ( url.indexOf(".jpg") > 0 ) || ( url.indexOf(".png") > 0 ) || ( url.indexOf(".gif") > 0 ) ) {
+            return '<img src="' + url + '", style="display:none;", alt="iimmgg">' + '<br/>';
+        } else {
+            return '<a href="' + url + '", target="_blank">' + url + '</a>' + '<br/>';
+        }
+    })    
+};
+
+
+function TasksController($scope, $http, $sce) {
 	var ITEMS_PER_PAGE= 5;
 	var indiviTotalPages = undefined;  //Three Types
 	var indiviCurrPage = undefined;  
@@ -291,12 +353,17 @@ function TasksController($scope, $http) {
 				console.log(queryMsgCodes);
 				
 				if(queryMsgCodes.length > 0){
+                    $('#loading').fadeIn();
+
 					$http({
 						url    : '/msg/getMsgContent',
 						method : 'POST',
 						data   : {'msgCodes' : queryMsgCodes}
 					})
 		 			.success(function(data){
+                        $scope.contentLoaded = true;
+                        showNGContent();
+                        $('#loading').fadeOut(1000);
 						callback(menu, start, end, data);
 					})
 					.error(function(err){
@@ -311,12 +378,18 @@ function TasksController($scope, $http) {
 
 	//start 和 end根据决定Redis的获取个数 默认 0 ～ -1选择全部
 	function initItemsNumber(start, end, callback){
+
+            $('#loading').fadeIn();
+
 	        $http({
 	        	url    : '/msg/init',
 	          	method : 'post',
 	        	data   : {'phoneNumber' : phoneNumber, 'start' : start, 'end' : end}
 	        })
 	        .success(function(data){
+                $scope.contentLoaded = true;
+                showNGContent();
+                $('#isloading').fadeOut(1500);
 	        	console.log(data);
 			sessionStorage['msg'] = JSON.stringify(data);
 			callback(data);
@@ -427,20 +500,29 @@ $scope.changePage = function(step){
 	});
 };
 
+$scope.testngClick = function(){
+    alert('ddg Worked');
+};
+
 //提交意见
 $scope.submitAdvise = function(){
+//    alert('advice');
     var ad = $("#advise").val().trim();
     if(ad == null || ad == '')  { 
-        alert('请添加文字哦!');
+        alert('您还没输入内容哦.(⊙o⊙)~~');
     }else{
 //        alert('输入的内容: ' + ad);
         
+        $('#loading').fadeIn();
         $http({
 		    url  	:  '/msg/advise',
 		    method 	:  'POST',
 		    data   	:  {'phoneNumber' : phoneNumber, 'advise' : ad}
 	    }).success(function(data){
 //            alert('lrange返回的list size: ' + data);
+            $scope.contentLoaded = true;
+            showNGContent();
+            $("#loading").fadeOut(1000);
             $("#myModal").modal('hide');
         }).error(function(data){
             $("#myModal").modal('hide');
@@ -516,11 +598,17 @@ $scope.option = function(n){
                             case 4:         //把选定的msgCode变为已读 计算出影响到的Unreaded数量
 //                              alert('进入4的callback处理前端逻辑');
                                 _.map(selected, function(item){
+                                    if(!item.isReaded){
+                                        $scope[$scope.currentMenu + 'unreadedCount']--;    //遇到未读的  unreaded--    
+                                    }
                                     return item.isReaded = true;    
                                 });
                             break;
                             case 5:         //.......未读....... 
                                 _.map(selected, function(item){
+                                    if(item.isReaded){
+                                        $scope[$scope.currentMenu + 'unreadedCount']++;   //遇到已读的  ++       
+                                    }
                                     return item.isReaded = false;    
                                 });
                             break;
@@ -558,6 +646,9 @@ $scope.option = function(n){
                         switch(n){
                             case 6:
                                 _.map($scope.tasks, function(item){
+                                    if(!item.isReaded){
+                                            $scope[$scope.currentMenu + 'unreadedCount']--;    //遇到未读的  unreaded--
+                                    }
                                     return item.isReaded = true;
                                 });
                             break;
@@ -567,7 +658,7 @@ $scope.option = function(n){
                                 setTimeout(function(){
                                     cache = {};
                                     refreshAfterDelete();    	
-                                }, 500);
+                                }, 1500);
                             break;
                             default:
                                 break;
@@ -579,6 +670,17 @@ $scope.option = function(n){
         } //End of switch
 
     } //isNumber
+};
+
+$scope.showOrHide = function(n){
+    var nn = parseInt(n, 10);
+    return nn > 0;
+};
+
+//escape HTML code
+$scope.deliberatelyTrustDangerousSnippet = function(code){
+    console.log('deliberratelyTrustYou');
+    return $sce.trustAsHtml(code);
 };
 
 function refreshAfterDelete(){
@@ -609,5 +711,6 @@ function refreshAfterDelete(){
 		}
 	});
 }
+
 }
 

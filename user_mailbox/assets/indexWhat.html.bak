@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="zjdx_msg">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <title>微视窗 &middot; 消息提醒</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="assets/carousel.css" rel="stylesheet">
+    <link href="assets/onlineService.css" rel="stylesheet">
+    <link href="assets/gb.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body class="back">
+<!-- Use TaskController -->
+<div ng-controller="TasksController">
+    <div id="loading"> </div> <!-- loading gif  -->
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-fixed-top topback" role="navigation">
+              <div class="container" style="width:100%;">
+                <div class="navbar-header" style="width:100%">
+                 <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>-->
+                  
+                  <!--此处为新添内容-->
+                   <span class="goback"><a href="javascript:history.go(-1);"><img src="assets/img/goback.png"></a></span>
+                  <a class="navbar-brand" id="phone" href="#" style="display:none;"><%=phoneNumber%></a>
+                  <a class="navbar-brand" href="javascript:void(0)" style="font-weight:bold;color:#ffffff;">欢迎您&nbsp;&lt;<%=hidedPhoneNumber%>&gt;</a>
+                 
+                </div>
+                <!--navbar-collapse -->
+          </div><!--container-->
+        </div><!--navbar-static-top-->
+
+      </div><!--container-->
+    </div><!--navbar-swapper -->
+
+
+    <!-- Carousel
+    ================================================== -->
+    <!--  <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
+      <!-- Indicators -->
+      <!--快速导航 暂时不要
+      <ol class="carousel-indicators" style="top:60%;">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      -->
+      <!--
+      <div class="carousel-inner">
+        <div class="item active">
+            <img ng-src="assets/img/flowBank.jpg"/>
+        </div>
+        <div class="item">
+            <img ng-src="assets/img/advMsg.jpg"/>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="top:30%;"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="top:30%;"></span></a>
+    </div>-->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing tooltip-demo mainbox" style="margin-top:50px;"><!--margin-top remedy carousel-->
+            <ul class="nav nav-pills navbox">
+                <li class="active"  ng-click="loadMenu('N')" data-toggle="tooltip" title="" data-original-title="未读{{NunreadedCount}} / 总共 {{N.length}}">
+                <a id="AId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge pull-right">{{AunreadedCount}} / {{A.length}}</span>
+                    <span class="glyphicon glyphicon-send"></span> -->
+                    <h4><font style="font-weight:bold;">消费通知</font></h4>
+                </a>
+              </li>
+              <li ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
+                <a id="BId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge pull-right" data-toggle="tooltip" title="" data-original-title="未读/总共 ~~">{{BunreadedCount}} / {{B.length}}</span>
+                    <span class="glyphicon glyphicon-leaf"></span> -->
+                    <h4><font style="font-weight:bold;">电子账单</font></h4>
+                </a>
+              </li>
+              <li ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
+                <a id="MId" href="" data-toggle="pill">
+                    <!--
+                    <span class="badge badge-inverse pull-right">{{NunreadedCount}} / {{N.length}}</span>
+                    <span class="glyphicon glyphicon-user"></span> -->
+                    <h4><font style="font-weight:bold;">活动推广</font></h4>
+                </a>
+              </li>
+            </ul>
+    <div style="text-align:center;">
+         <img id="wait" ng-src="assets/img/wait.jpg" style="width:295px; height:235px; display:none;"/> 
+    </div>
+
+    <div class="panel-group cont_main" id="accordion">
+       <div id="ngShowTasks" ng-show="contentLoaded" style="visibility:hidden "> 
+         <div ng-repeat="task in tasks" class="panel panel-success cont" style="margin-top:0px;">
+            <span style="float:left;">
+                <input id="cbx_{{task.msgCode}}" type="checkbox" ng-click="checkItem(task.msgCode)" ng-model="task.isChecked">
+            </span>
+            <div ng-click="clickItem(task.msgContent)" class="panel-heading panel-headinga  hangline" data-toggle="collapse" data-parent="#accordion" href="#collapseHashID_{{task.msgContent | composeIdByContent}}" class="collapsed" style="padding-left:10px;padding-right:2px;padding-top:0px;padding-bottom:12px;background:none;">
+            
+                <span>
+                    <!-- use ng-src instead src <- GET 404 not found -->
+                    <img ng-src="assets/img/{{task.thumbnail}}.png" style="width:30px;height:30px;margin-left:20px"/>
+                    <!--<a>{{task.msgCode}}</a>-->
+                    <code href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="" style="background:none;">{{task.msgContent | extractContent}}</code>
+                    <div class="pull-right">
+                        <div style="text-align:right;"><span href="javascript:void(0)" ng-class="(task.isReaded) ? 'label label-info' : 'label label-warning'">{{task.isReaded | isReadedFilter}}</span></div>
+                        <div><small>({{task.score | elapsedSoFarFilter}})</small></div>
+                    </div>
+                </span>
+            </div><!--panel-heading-->
+
+            <div id="collapseHashID_{{task.msgContent | composeIdByContent}}" class="panel-collapse collapse">
+                <div class="panel-body" style="border-top:none;">
+                    <div class="list-group list-group">
+                        <a class="list-group-item" style="background:none;border:1px solid #808080">{{task.msgContent | extractOracleFields}}</a>
+                    </div>
+                </div>
+            </div><!--panel-collapse-->
+         </div><!--panel-success-->
+       </div><!-- ng-show -->
+    </div><!-- panel-group -->
+
+    <div class="btn-group dropup btn-group-justified biaoji">
+        <div class="btn-group">
+          <a class="btn btn-sm dropdown-toggle xuanze" data-toggle="dropdown">
+              <font style="font-weight:bold;font-size:18px;color:#ffffff;">选择</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
+          </a>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-click="option(1)">
+                    <a>
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>不选</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(2)">
+                    <a>
+                        <span class="glyphicon glyphicon-fullscreen"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>全选</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(3)">
+                    <a>
+                        <span class="glyphicon glyphicon-transfer"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>反选</span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- btn-group -->
+
+        <div class="btn-group">
+          <a class="btn btn-sm dropdown-toggle biaojiw" data-toggle="dropdown">
+              <font style="font-weight:bold;font-size:18px;color:#ffffff;">标记为</font><span>&nbsp;</span><span class="caret" style="color:#ffffff;"></span>
+          </a>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-click="option(4)">
+                    <a>
+                        <span class="glyphicon glyphicon-check"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>已读</span>
+                    </a>
+                </li>
+                
+                <li ng-click="option(5)">
+                    <a>
+                        <span class="glyphicon glyphicon-paperclip"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>未读</span>
+                    </a>
+                </li>
+                <li ng-click="option(6)">
+                    <a>   
+                        <span class="glyphicon glyphicon-tree-conifer"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>全部设为已读</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(7)">
+                    <a>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>删除</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li ng-click="option(8)">
+                    <a>   
+                        <span class="glyphicon glyphicon-fire"></span>
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <span>删除全部</span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- btn-group -->
+    </div>  <!-- btn-group-justified -->
+
+    <ul class="pager">
+        <li><a href="" ng-click = 'changePage(-1)'>上一页</a></li>
+        <li id="ngShowPager" style="visibility:hidden"><a>第&nbsp;{{currentPage}}/{{totalPages}}&nbsp;页</a></li>
+        <li><a href="" ng-click = 'changePage(1)'>下一页</a></li>
+    </ul>
+</div><!-- /.container marketing-->
+
+         
+        <div class="foot bottom">
+            <a href="#"><font color="#fff">TOP↑</font></a>&nbsp;|&nbsp;
+            <a herf="#" data-toggle="modal" data-target="#myModal"><font color="#fff">意见反馈</font></a>
+            <br>【浙ICP备12014759号-1】<br>中国电信版权所有
+        </div>
+
+    <!--
+<div id="onlineService" data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)" seed="csc_kb_router_online"><img style="width:62px; height:77px; display:block;" src="assets/img/onlineService.png"></a></div>
+    -->
+
+    <!-- sample modal content -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">请留下您遇到的问题或提出宝贵建议！</h4>
+          </div>
+
+          <div class="modal-body">
+              <textarea id="advise" style="width: 100%" rows="5" type="text"></textarea> 
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" ng-click='submitAdvise()'>提交</button>
+            <!--<a ng-click="testngClick()">11222</a>  -->
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>  <!-- End of TasksController -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="bootstrap-3.0.3/js/bootstrap.min.js"></script>
+    <script src="holder.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="tasks.js"></script>
+    <script src="assets/js/angular-toggle-switch.js"></script>
+  </body>
+  
+  <script>
+//  $('#myTab a').click(function (e) {
+//      e.preventDefault()
+//      $(this).tab('show')
+//  })
+
+//////////////////////
+    $('.tooltip-demo').tooltip({
+        selector: "[data-toggle=tooltip]",
+        container: "body"
+    });
+  </script>
+  
+</html>

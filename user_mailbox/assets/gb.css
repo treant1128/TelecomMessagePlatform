@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.gb_header_main{ width:100%;}
+.back{ background:url(../assets/img/bg.jpg)}
+.topback{ background:url(../assets/img/head_bg.png) repeat-x; width:100%; height:50px;}
+
+.topnum{ color:#ffffff; font-weight:bold; line-height:50px;} 
+.goback{ width:20%; text-align:left; float:left;  }
+.goback img{margin-top:13px;}
+.goback a{ color:#ffffff;  line-height:50px;}
+.xxzx{ width:60%; text-align:center; float:left; line-height:50px; font-size:16px; color:#ffffff; font-weight:bold;}
+.gb_home{ width:20%; text-align:right; float:right;}
+.gb_home img{ margin-top:13px;}
+.gb_home a{ color:#ffffff;  line-height:50px;}
+
+.gb_welcome{ width:100%; height:30px; line-height:30px; clear:both; margin-top:55px;}
+.gb_welcome a{ color:#ffffff; font-size:16px; display:block;}
+
+
+.bottom{ background:url(../assets/img/foot_bg.png) repeat-x; width:100%;}
+.mainbox{ width:100%;}
+.navbox{ width:100%; text-align:center; margin-left:2%; }
+.navbox li {
+        width: 32%;
+//      text-align: center;
+        padding-right: 10%;
+        background: none repeat scroll 0% 0% rgb(18, 127, 215);
+        border-radius: 5px;
+		height:39px;
+		margin:0;
+		padding:0;
+      }
+.navbox li a{ padding:0; line-height:39px;}
+.navbox li a h4{ margin-top:12px; font-size:14px;}
+.navbox li sup{color:#F90; margin-left:5px; font-size:16px;}
+.nav nav-pills navbox .activea{backround:none}
+.navbox > li > a:hover{
+    text-decoration:none;
+    background:none;
+}
+.nav > li > a:hover{
+    text-decoration:none;
+    background:none;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{background:none; color:#428BCA}
+.navbox li.active{background:none;}
+.navbox > li > a{color:#ffffff;}
+.main_back{ background:url(../assets/img/main_back.png);}
+.cont_main{ margin:0 auto; background:url(../assets/img/main_back.png); width:96%; border-radius:10px; border-bottom:none;}
+.hangline{ border-bottom:1px solid #6599bf;}
+.biaoji{ margin-top:20px;}
+.cont{ width:98%; padding-top:20px; margin:0 auto; background:none; border:none;  border-bottom:1px solid #6b9cbe;}
+.xuanze{ background:#3789ca;}
+.biaojiw{ background:#d88a2c;}
+.yonghu{ width:98%; margin:20px auto 0; border:1px solid #959595; border-radius:10px; min-height:72px; height:auto;!important height:72px;}
+.yonghu span{ display:block; width:96%; margin:10px auto 0;}
+.btn-successa:hover{ background:#3789ca}
+.btn-infos:hover{background:#d88a2c;}
+.hanglinea{ background:none; border:none; border-bottom:1px solid #6b9cbe;}
+.panel-headinga{ background:none;}
+.nav-pillsa > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{background:none;}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
+

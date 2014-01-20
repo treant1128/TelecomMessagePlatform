@@ -36,17 +36,20 @@ exports.isNebie = function(phoneNumber, callback){
 //如果不存在, 则根据消息类型和HLEN生成新的msgCode传入回调
 var _getMsgCodeByContent = function(msgContent, prefix, callback){
 	if(msgContent.constructor === String){
+       
 		async.waterfall([
 			function(cb){
 				client.HGETALL(HASH_MSG_POOL_KEY, function(err, result){
 					var hasMsgContent = false;
 					var msgCode = null;
-					for(var p in result){
+					
+                    for(var p in result){
 						if(result[p] === msgContent){
 							hasMsgContent = true;
 							msgCode = p;
 							console.log('已存在msgCode: ' + p);
-							break;  //break in advance if found
+                            
+							break;  //break in advance if hits the old hash
 						}
 					}	
 					cb(err, hasMsgContent, msgCode);
@@ -58,26 +61,43 @@ var _getMsgCodeByContent = function(msgContent, prefix, callback){
 				if(hasMsgContent){
 					cb(null, msgCode);                //msgCode存在, msgCode直接传入结果waterfall
 				}else{
-					client.HLEN(HASH_MSG_POOL_KEY, function(err, result){
-						result += 1;              // 18
-						result = prefix + result; // M19
-						cb(err, result);		
-					});  //根据HLEN-prefix生成新msgCode
+//					client.HLEN(HASH_MSG_POOL_KEY, function(err, result){
+//                        console.log('Hash表field的个数: ' + result);
+//						result += 1;              // 18
+//						result = prefix + result; // M19
+//						cb(err, result);		
+//					});  //根据HLEN-prefix生成新msgCode
+
+                    //不再和hlen关联  观察数据后发现hash field有莫名的跳空 -> Bug新值HSETNX不进去
+                    cb(null, prefix + randomString());
 				}
 			},
 				
 			], function(err, result){
+    //            if(result === 'N72829'){
+    //                    console.log('N72829对应的内容: ' + msgContent);    
+    //            }
 				callback(result);
 			}
 		); // End of async.waterfall
 	} // End of msgContent OK
 };
 
+//生成一个timestamp + char的随机string
+var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
+function randomString(){
+    var now = new Date().getTime().toString();
+    var ch = chars.charAt(Math.floor(Math.random() * chars.length));
+    return now + ch;
+};
 
 var _setMsgCodeContentHash = function(msgCode, msgContent, callback){
 	client.HSETNX(HASH_MSG_POOL_KEY, msgCode, msgContent, function(err, result){
 		//事实上只可能返回result=0/1, 永远不可能有Error
+        //Bug
+        //很有可能出在这里!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		var detail = err ? 'Error ...' : (result ? 'Set-New-MsgCode' : 'MsgCode-Exists-Already');
+        console.log('_setMsgCodeContentHash的结果: ' + msgCode + ' - ' + msgContent + ' - ' + detail);
 		callback(detail);
 	});
 };
@@ -114,7 +134,7 @@ var _zaddMsgCodeToNumbers = function(numbers, msgCode, callback){
 		var count = 0;
 
 		async.whilst(
-			function(){return count < numbers.length},
+			function(){return count < numbers.length; },
 			function(callback){
 				client.ZADD(numbers[count] + UNREADED_FLAG, score, msgCode, function(err, result){
 					callback();
@@ -504,7 +524,7 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 						async.waterfall([
 							function(cb1){
 								_getMsgCodeByContent(msgContents[count], prefix, function(msgCode){
-									console.log("cccccccccccccccccccccccccc-------"+msgCode);
+									console.log("生成的"  + phoneNumber + ' -- : ' + msgCode);
 									cb1(null, msgCode);
 								});
 							},     //先根据内容去Hash中"挂号"
@@ -512,7 +532,6 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 								//如果该msgCode已存在于R/U/D任意其一就err -> skip, 只有三者都不包含的才加入ZADD队列
 								//已读/未读/删除绝不会有交集  因为所有的操作都是原子性
 								async.parallel([
-
 									function(pcb){
 										client.ZSCORE(phoneNumber + UNREADED_FLAG, code, function(err, result){
                                             console.log('------------Unreaded的结果--------'+err+'--'+result);
@@ -539,7 +558,7 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 									cb2(err, code);  	
 								}); //end of async.parallel     parallel判断msgCode是否存在于 已读/未读/删除 任意其一
                                 //If member does not exist in the sorted set, or key does not exist, nil is returned
-				                //client.SISMEMBER(phoneNumber + READED_FLAG, code, function(err, result){ //这个是对Set
+				                //client.SISMEMBER(phoneNumber + READED_FLAG, code, function(err, result){ //这个是针对Set的
 							},
 							function(code, cb3){
 								console.log("bbbbbbbbbbbbbbbbbbb-------"+code);
@@ -549,7 +568,8 @@ var _multiMsgsToOnePhone = function(phoneNumber, msgContents, prefix, ccbb){
 							}	//即将新增到UNREADED
 						], function(err, msgCode){
 							count++;
-							console.log('*******error########'); 	console.log(err);
+							console.log('*******error########'); 
+                            console.log(err);
 							if(err === null){  //err === U/R/D 表示已存在
 								U_code_scoreForContent.push(score);	
 								U_code_scoreForContent.push(msgCode);
@@ -589,3 +609,11 @@ exports.saveAdvise = function(phoneNumber, advise, cb){
         });
     }
 };
+
+exports.getAdvises = function(cb){
+    client.LRANGE(LIST_ADVISE_KEY, 0, -1, function(err, advices){
+        cb(advices);    
+    });    
+};
+
+
