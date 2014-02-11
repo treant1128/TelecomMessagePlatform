@@ -1,280 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-    <meta http-equiv="content-type" content="text/html;charset=GBK">
+  <head>
     <meta charset="utf-8">
+    <title>登陆 &middot; 悟空微视窗管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.png">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>后台号码包添加</title>
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
-    <link href="bootstrap-3.0.3/bootstrap-switch.min.css" rel="stylesheet" type="text/css"> 
-    <!-- Custom styles for this template -->
-    <link href="bootstrap-3.0.3/jumbotron-narrow.css" rel="stylesheet"> 
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
 
-    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap-3.0.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bootstrap-3.0.3/bootstrap-switch.min.js"></script>
-</head>
-<body>
-   <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">主页</a></li>
-          <li><a href="#">关于我们</a></li>
-          <li><a href="#">联系方式</a></li>
-        </ul>
-        <h3 class="text-muted">微视窗-添加任务</h3>
-      </div>
-	  <br>
-	  <span></span>
-	  
-	  <div class="alert alert-block alert-danger fade in">
-		  <button type="button" class="close" data-dismiss="alert">x</button>
-		  <p class="alert-heading">暂时只提供活动推广版块任务的下发!</p>
-	  </div>
+    </style>
 
-	  <table width="100%" class="infoForm">
-			<tr>
-				<td>选择文件：</td>
-				<td>
-					<select name="filePath" id="filePath">     
-					</select> 
-					<span style="margin-left:5px;color:#FF7F00;"><code>（选择已分类的号码包）</code></span>
-					<div id="numDiv"></div>
-					<div id="numFileTip" style="width:250px;"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-		
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>下发分类：</td>
-				<td>
-					<input type="radio" name="taskType" value="A"  checked="checked"/>活动推广&nbsp;&nbsp;
-					<input type="radio" name="taskType" value="B" />电子账单&nbsp;&nbsp;
-					<input type="radio" name="taskType" value="N" />消费通知&nbsp;&nbsp;
-                </td>
-			</tr>
-			
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>下发标题：</td>
-				<td>
-					<input id="msgTitle" style="width: 400px" name="send_title" id="sendTitle" maxlength="100" type="text"/>
-				</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>下发内容：</td>
-				<td>
- 					<textarea id="msgContent" style="width: 400px" rows="15" type="text"></textarea>
-				</td>
-			</tr>
-		
-		</table>
-		
-        <hr>
-        <div>
-            <span>是否插入图片:&nbsp;&nbsp;&nbsp;&nbsp;
-                <input id="insertImg" type="checkbox" checked class="switch" data-on-label="是" data-off-label="否"/>
-             <hr>
-                <form id="imgForm" method="post" enctype="multipart/form-data" action="/msg/admin/file-upload">
-                    <input id="seleImg" name="thumbnail" type="file"/>
-                </form>   
-            </span>
-        </div>
-	<hr>
-	<div>
-	<!-- 必须为loading 负责没有disabled状态  -->
-	<button type="button" id="btn_submit" data-loading-text="处理中 ~~" data-success-text="任务完成!!" class="btn btn-lg btn-primary" style="text-align:center; MARGIN-RIGHT:200px; MARGIN-LEFT:260px;">
-		<span class="glyphicon glyphicon-cloud-upload"></span>  提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
-	</div>
-      <div class="footer">
-        <p style="text-align: center;">China Telecom. Copyright &copy;2013. All rights reserved.</p>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-signin">
+        <h2 class="form-signin-heading">请登录</h2>
+        <input id="username" type="text" class="input-block-level" placeholder="用户名...">
+        <input id="password" type="password" class="input-block-level" placeholder="密码...">
+        <!--
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+   		 -->
+        <button id="login" type="button">登录</button>
       </div>
 
     </div> <!-- /container -->
-	
-	</body>
-	
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-                var fileName = "nothing";
-                $('#insertImg').bootstrapSwitch();
-                $('#insertImg').on('switch-change', function(e, data){
-                    if($(this).bootstrapSwitch('state')){
-                        $('#seleImg').css('visibility', 'visible');
-                    }else{
-                        $('#seleImg').css('visibility', 'hidden');
-                    }    
-                });
-
-			var g_dirs=[];
-			var templete="<option></option>";
-			
-			$.get('/zjdx/nrpkg/getDirs', function(data){
-					console.log(data);
-				g_dirs=eval(data);
-				console.log(g_dirs);
-				for(var i=0; i<g_dirs.length; i++){
-				templete+="<option value="+g_dirs[i].name+">"+g_dirs[i].name+"  {"+g_dirs[i].count +"}"+"</option>";
-				}
-				
-				//把对象转为对象
-				jQuery("#filePath").empty();
-				jQuery("#filePath").append(templete);
-			});  //End of Get
-
-			$("#filePath").change(function(){
-				$("#numDiv").html("");
-				var fp=$("#filePath").val();
-				if(fp == "")  return;    //选最上边的空   不用再浪费post
-
-				$.post('/zjdx/nrpkg/subDirDetails', 
-					{"subDirName" : fp},
-					function(data){
-						
-						if(data==null||fp.length==0){
-							return;
-						}else{
-							console.log(data);
-							var numHtml="";
-							$.each(data, function(idx, item){
-								numHtml+='<span style="width:160px; display:inline-block;"><input dadinggou="cbx_'
-								+ idx
-								+ '" value="'
-								+ item.path
-								+ '" type="checkbox">'
-								+ item.name
-								+ ' ['
-								+ item.lines
-								+ ']</span>';
-						});
-
-						$("#numDiv").html(numHtml);
-	
-					console.log($("[dadinggou^='cbx']"));
-				$("[dadinggou^='cbx']").each(function(index){
-					console.log($(this).val());
-                    $(this).bootstrapSwitch();
-// 					$(this).wrap('<div class="make-switch switch-small" dadinggou="switch_'
-//					 		        + index
-//                                    + '" fuckWhat="'
-//                                    + $(this).val()
-//            + '" data-on-label="<span class=\'glyphicon glyphicon-ok\'></span>" data-off-label="<span class=\'glyphicon glyphicon-remove\'></span>">').bootstrapSwitch();		
-				});
-				
-					setTimeout(function(){
-                        console.log($("[dadinggou^='switch']"));
-						$("[dadinggou^='cbx']").bootstrapSwitch('setState', true);
-//						$("[dadinggou^='cbx']").bootstrapSwitch('toggleState'); //Just for joke
-					}, 1000);
-
-					}   //End of response OK 
-				});  //End of HTTP Post
-			});  //End of filePath Change
-
-
-			$("#btn_submit").click(function(){
-				var noneSelect = false;
-				var nrPkgs = new Array;
-				$("[dadinggou^=cbx]").each(function(){
-					//只要有一个是true, 那|= 结果就是true
-					noneSelect |= $(this).bootstrapSwitch('state');
-					if($(this).bootstrapSwitch('state')){
-						nrPkgs.push($(this).val());
-					}
-					console.log($(this).bootstrapSwitch('state'));
-				});
-
-				if(!noneSelect){
-					alert('请至少选择一个号码包!');
-					return;
-				}
-						
-				var t =  $("#msgTitle").val().trim();
-				if(t === ''){
-					alert('请输入下发标题!');
-					return;
-				}
-				
-				var c = $("#msgContent").val().trim();
-				if(c === ''){
-					alert('请输入下发内容!');
-					return;
-				}
-				console.log(nrPkgs);
-
-				var prefix = $('input[name="taskType"]:checked').val();
-                if(prefix !== 'A'){
-                    alert('目前只能下发活动推广内容！');
-                    return;
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#login').click(function(){
+            var username = $('#username').val();
+            var password = $('#password').val();
+        
+            $.post('/msg/admin/login', {username:username, password:password}, function(data){
+                if(data === 'abc-mnt-ddg'){
+                    sessionStorage.setItem('username', username);
+                    sessionStorage.setItem('password', password);
+                    window.location = 'admin.html';
+                }else{
+                    alert(data);    
                 }
-
-
-                if($('#insertImg').bootstrapSwitch('state')){
-                    console.log($('#seleImg').val());
-                    var filePath = $('#seleImg').val();
-                    if(filePath){
-                        if(filePath.indexOf('/') > -1){             //Are you play on Unix-like OS ?
-                            fileName = filePath.substr(filePath.lastIndexOf('/') + 1);
-                        }else if(filePath.indexOf('\\') > -1){      //Common Window platform | file seperator \
-                            fileName = filePath.substr(filePath.lastIndexOf('\\') + 1);
-                        }else{                                      //flag for nothing
-                            fileName = "nothing";
-                        }
-
-                        $('#imgForm').submit(
-                        );
-                    }else{
-                        alert('请选择要插入的图片文件！');
-                        return;
-                    }
-                }
-
-
-//                return;    //Just 4 Test
-                
-                var btn = $(this);
-				btn.button('loading');
-
-                $.post('/msg/admin/addMultiMission',
-				       	{
-                            fileName   : fileName, 
-                            prefix     : prefix, 
-                            // 前端Angular的extractImageSrc filter取值逻辑是matches[0] 对所有资源都去match
-                            // 为了获取到img的src      fileName必须放在c前面  防止c中含有http链接时会顶替img位置
-                            // 为了匹配正则完全  URL两端必须留一空格
-                            msgContent : t + "*!-_-!*" + (fileName == 'nothing' ? '' : ' http://b.zj189.cn/msg/admin/file-upload/' + fileName + ' ') + c,  
-                            nrPkgs     : nrPkgs
-                        },
-				       	function(data){
-                            alert(JSON.stringify(data));
-                            console.log(data);
-                            setTimeout(function(){
-                                btn.button('success');	
-                                window.location.reload();
-                            }, 2222);
-                });
-			});
-
-		});  //End of Ready		
-	</script>
+            });    
+        });
+    });
+</script>
+  </body> 
 </html>

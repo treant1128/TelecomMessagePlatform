@@ -101,7 +101,7 @@
 
     <div class="container marketing tooltip-demo mainbox" style="margin-top:20px;"><!--margin-top remedy carousel-->
             <ul class="nav nav-pills navbox">
-                <li class="active"  ng-click="loadMenu('N')" data-toggle="tooltip" title="" data-original-title="未读{{NunreadedCount}} / 总共 {{N.length}}">
+                <li id="pillN" class="active"  ng-click="loadMenu('N')" data-toggle="tooltip" title="" data-original-title="未读{{NunreadedCount}} / 总共 {{N.length}}">
                 <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{NunreadedCount}}</span>-->
                     <a id="AId" href="" data-toggle="pill">
 
@@ -109,7 +109,7 @@
                         <h4><font style="font-weight:bold;">消费通知<sup ng-show="showOrHide(NunreadedCount)">●</sup></font></h4>
                     </a>
                 </li>
-                <li ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
+                <li id="pillB" ng-click="loadMenu('B')" data-toggle="tooltip" title="" data-original-title="未读{{BunreadedCount}} / 总共 {{B.length}}">
                 <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{BunreadedCount}}</span>-->
                     <a id="BId" href="" data-toggle="pill">
                     
@@ -117,7 +117,7 @@
                         <h4><font style="font-weight:bold;">电子账单<sup ng-show="showOrHide(BunreadedCount)">●</sup></font></h4>
                     </a>
                 </li>
-                <li ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
+                <li id="pillA" ng-click="loadMenu('A')" data-toggle="tooltip" title="" data-original-title="未读{{AunreadedCount}} / 总共 {{A.length}}">
                 <!--<span class="badge pull-right" style="background-color:#d88a2c;">{{AunreadedCount}}</span>-->
                     <a id="MId" href="" data-toggle="pill">
                         

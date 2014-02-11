@@ -20,6 +20,56 @@ client.on('error', function(err){
   console.log("Error happens: " + err);
 });
 
+//给华为的服务常常会占用内存暴增  OOM  把这个服务也并到../redis.js中试一下
+//
+//var SUCCESS = 'RestfulAccessSuccess';
+//var FAILURE = 'RestfulAccessFailure';
+//var verify = function(p){
+//    if(p.length === 11 && p.charAt(0) === '1'){
+//        return p;
+//    }else if(p.length === 13 && p.substr(0, 2) === '86'){
+//        return p.substr(2);
+//    }else{
+//        return null;
+//    }
+//};
+//
+//var _hwRestful = function(phoneNumber, callback){
+//    var o = new Object();
+//    console.log('Receive: ' + phoneNumber);
+//
+//    if(_.isString(phoneNumber)){
+//         phoneNumber = verify(phoneNumber);
+//         if(phoneNumber){
+//             client.multi()
+//             .ZCARD(phoneNumber + 'U')       //Unreaded
+//             .ZCARD(phoneNumber + 'R')       //Readed
+//             .ZCARD(phoneNumber + 'D')       //Delete
+//             .INCRBY(SUCCESS, 1)
+//             .GET(FAILURE)
+//             .exec(function(err, replies){
+//                 if(err){
+//                     client.INCRBY(FAILURE, 1);
+//                     o['Result'] = null;
+//                     callback(o);
+//                 }else{
+//                     replies = _.map(replies, function(item){
+//                             return item ? item : 0;
+//                         });
+//                     o['Result'] = _.object(['Unreaded', 'Readed', 'Deleted', 'AccessSuccess', 'AccessFailure'], replies);
+//                     callback(o);
+//                 }
+//             });
+//         }else{
+//             client.INCRBY(FAILURE, 1);
+//             o['Result'] = null;
+//             callback(o);
+//         }        
+//    }
+//};
+//
+//exports.hwRestful = _hwRestful;
+//-----------------------------暂时吧hw_Restful中的服务迁移过来试一下­---------------------------
 //用户登录后 先判断其是不是初次登录, 如果是就只能马上查询oracle再render, 否则内容有可能为空
 //如果不是就先render页面, 在后台查询oracle再插入redis, 新内容将在其下次登录后展现
 exports.isNebie = function(phoneNumber, callback){
@@ -43,6 +93,8 @@ var _getMsgCodeByContent = function(msgContent, prefix, callback){
 					var hasMsgContent = false;
 					var msgCode = null;
 					
+                    //随着Hash的增大    这里是严重的性能瓶颈   不能每次在HGETALL中暴力for循环
+                    //想办法新增Set来判断 元素是否存在
                     for(var p in result){
 						if(result[p] === msgContent){
 							hasMsgContent = true;

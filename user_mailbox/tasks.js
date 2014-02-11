@@ -196,6 +196,7 @@ function replaceFrom(from){
                     .replace(/wsc_newer/, '新入网活动')
                     //以后有什么活动wsc后面会加后缀区分的
                     .replace(/wsc/, '圣诞节活动')
+                    .replace(/chunjie/, '春节活动')
 ;
     }    
     return "未知";
@@ -463,6 +464,13 @@ $scope.loadMenu = function(menu){
 
 function load(menu){
 	if(menu === 'A' || menu === 'B' || menu === 'N'){
+        $http({
+            url     : '/msg/loadMenu',
+            method  : 'POST',
+            data    : {phoneNumber: phoneNumber, menu : menu}
+        }).success(function(data){
+            console.log('After loadMenu: ' + data);
+        });
 		//sync scope variables
 		$scope.currentMenu = menu;
 		$scope.totalPages = indiviTotalPages[menu];
@@ -684,6 +692,11 @@ $scope.deliberatelyTrustDangerousSnippet = function(code){
 };
 
 function refreshAfterDelete(){
+
+    $('#pillN').addClass('active');
+    $('#pillB').removeClass('active');
+    $('#pillA').removeClass('active');
+
  initItemsNumber(0, -1, function(data){       			//默认0 -> -1 加载全部
 		if(data !=null && data.constructor === Object){
         	for(var p in data){  					//forEach Object

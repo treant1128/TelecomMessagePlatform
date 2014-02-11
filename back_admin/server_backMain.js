@@ -68,6 +68,20 @@ function assignMission(msgContent, prefix, nrPkgs, callback){
         } //End of params OK
 }
 
+//登录验证
+app.post('/login', function(req, res){
+    var username = req.body.username;
+    var password = req.body.password;
+
+    console.log('输入的用户名: %s 密码: %s', username, password);
+
+    if(username === 'wukong' && password === 'zjdx'){
+        res.send('abc-mnt-ddg');
+    }else{
+        res.send('用户名或密码有误!');    
+    }
+});
+
 //一次性按多个号码包批量插入相同任务, 消息msgCode由redis.js中getMsgCodeByContent逻辑自动生成
 //监听前端HTTP POST请求, 只需要: 1.各个号码包的绝对路径  2.消息内容  3. 消息分类前缀(不同Menu显示) 
 app.post('/addMultiMission', function(req, res){
@@ -81,12 +95,13 @@ app.post('/addMultiMission', function(req, res){
 
 	console.log(name + ' :: ' + msgContent + ' :: ' + prefix);
 	console.log("收到的号码包数组: " + nrPkgs);
-    console.log(nrPkgs.constructor);
+//    console.log(nrPkgs.constructor);
 //暂时截获请求   Just 4 Test	
-    if((nrPkgs.toString().indexOf("18006783900") === -1) && (nrPkgs.toString().indexOf("13376817631") === -1)){      //测试时的密钥  不包含'abc-mnt-ddg'的 就提前return
-	    res.send('号码还没开通: ' + name + ' :: ' + msgContent + ' :: ' + prefix+" --收到的号码包数组: " + nrPkgs);
-	    return;
-    }
+//    if((nrPkgs.toString().indexOf("18006783900") === -1) && (nrPkgs.toString().indexOf("13376817631") === -1)){      //测试时的密钥   只能下发给从access.log中抽取的号码
+//    if((nrPkgs.toString().indexOf("抽取的号码文件夹") === -1)){      //测试时的密钥   只能下发给从access.log中抽取的号码
+//	    res.send('这些号码还不能下发: ' + name + ' :: ' + msgContent + ' :: ' + prefix+" --收到的号码包数组: " + nrPkgs);
+//	    return;
+//    }
 
     assignMission(msgContent, prefix, nrPkgs, function(result){
 	   res.send(result);

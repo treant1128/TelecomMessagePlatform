@@ -6,6 +6,7 @@ var app = express();
 
 var AES = require('../AES.js');
 var redis = require('../redis.js');
+var statistics = require('./statistics.js');
 
 app.use('/', express.static(__dirname + '/'));
 app.use(express.bodyParser({}));
@@ -20,6 +21,8 @@ console.log('用户端访问服务监听 Port: ' + port);
 
 //这个路径需要在tasks的POST请求中指定
 app.get('/', function(req, res){
+    statistics.accessPV();
+
 	console.log(req.headers);
   var phoneNumber = req.headers['x-up-calling-line-id'];  //获取wap登陆实际手机号
   console.log("=============I am cookies parser=============");
@@ -66,6 +69,9 @@ if(phoneNumber == null || phoneNumber == ""){
 
     //解密的手机号码constructor是SlowBuffer 没有substr
     phoneNumber = phoneNumber.toString();
+
+    statistics.accessUV(phoneNumber);
+
 	///////////////////////////////
     var hided = phoneNumber.substr(0, 3) + '****' + phoneNumber.substr(7);
 	redis.isNebie(phoneNumber, function(nebie){
@@ -156,4 +162,33 @@ app.get('/advise', function(req, res){
         advises.unshift('*手*机*号* | *************提*交*时*间************* | *建*议*内*容*');
         res.send(advises.join("<br>"));            
     });    
+});
+
+app.post('/loadMenu', function(req, res){
+    var menu = req.body.menu;
+    var phoneNumber = req.body.phoneNumber;
+
+    console.log('%s 加载目录: %s', phoneNumber, menu);
+
+    if(menu == 'N'){
+        statistics.N_PV();
+        statistics.N_UV(phoneNumber);
+    }else if(menu == 'A'){
+        statistics.A_PV();
+        statistics.A_UV(phoneNumber);
+    }else{
+
+    }
+
+    res.send('ddg');
+});
+
+app.get('/tj', function(req, res){
+    res.render('statistics');    
+});
+
+app.get('/statisticsData', function(req, res){
+    statistics.getAllFromHash(function(result){
+        res.send(result);
+    });
 });
