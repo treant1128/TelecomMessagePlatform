@@ -100,6 +100,12 @@ if(phoneNumber == null || phoneNumber == ""){
 
 		}
 	});
+
+    //缓兵之计   只给用户渲染现有的数据   不查询Oracle 调用Redis等逻辑    最大限度减轻服务器压力
+//    redis.isNebie(phoneNumber, function(nebie){
+//        console.log('缓兵之计的nebie: ' + nebie);
+//        res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
+//    });
  });
 
 

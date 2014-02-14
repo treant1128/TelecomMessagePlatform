@@ -48,7 +48,7 @@ var verify = function(p){
 //}
 app.post('/', function(req, res){
     var phoneNumber = req.body.phoneNumber;
-    console.log('Modify: ' + phoneNumber);
+//    console.log('Modify: ' + phoneNumber);
 
     if(phoneNumber != null && phoneNumber.constructor === String){
         var obj = new Object();
@@ -58,12 +58,14 @@ app.post('/', function(req, res){
             client.ZCARD(phoneNumber + 'U', function(e, r){
                 obj['Result'] = new Object();
 
-                obj['Result'].UnReaded = r;
+//                obj['Result'].UnReaded = r;          //大小写要看仔细
+                obj['Result'].Unreaded  = r;
                 obj['Result'].Readed = 0;
                 obj['Result'].Deleted = 0;
                 obj['Result'].AccessSuccess = 0;
                 obj['Result'].AccessFailure = 0;
 
+                console.log('OK: ' + phoneNumber);
                 res.send(obj);
             });
         }else{

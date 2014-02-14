@@ -6,6 +6,7 @@ var timeUtil = require('./timeUtil.js');
 ///////////////Global Const String Variable////////////////
 var SET_VETERAN_KEY = 'zjdx_msg:set_veteran:key';
 var HASH_MSG_POOL_KEY = 'zjdx_msg:hash_pool:key';
+var HASH_MSG_POOL_INVERSE_KEY = 'zjdx_msg:hash_pool_inverse:key';
 //var SET_MSG_POOL_KEY = 'zjdx_msg:setpool:key';
 var UNREADED_FLAG = 'U';
 var READED_FLAG = 'R';
@@ -83,29 +84,39 @@ exports.isNebie = function(phoneNumber, callback){
 };
 
 //先迭代HASH_MSG_POOL_KEY的所有Field-Value, 如果msgContent已存在, 则直接用之
-//如果不存在, 则根据消息类型和HLEN生成新的msgCode传入回调
+//如果不存在, 则根据消息类型和HLEN生成新的msgCode传入回调   -----------deprecated already
 var _getMsgCodeByContent = function(msgContent, prefix, callback){
 	if(msgContent.constructor === String){
        
 		async.waterfall([
 			function(cb){
-				client.HGETALL(HASH_MSG_POOL_KEY, function(err, result){
-					var hasMsgContent = false;
-					var msgCode = null;
-					
-                    //随着Hash的增大    这里是严重的性能瓶颈   不能每次在HGETALL中暴力for循环
-                    //想办法新增Set来判断 元素是否存在
-                    for(var p in result){
-						if(result[p] === msgContent){
-							hasMsgContent = true;
-							msgCode = p;
-							console.log('已存在msgCode: ' + p);
-                            
-							break;  //break in advance if hits the old hash
-						}
-					}	
-					cb(err, hasMsgContent, msgCode);
-				});
+//				client.HGETALL(HASH_MSG_POOL_KEY, function(err, result){
+//					var hasMsgContent = false;
+//					var msgCode = null;
+//					
+//                    //随着HLEN的增大    这里是严重的性能瓶颈   不能每次在HGETALL中暴力for循环
+//                    //想办法新增Set来判断index | 元素是否存在
+//                    for(var p in result){
+//						if(result[p] === msgContent){
+//							hasMsgContent = true;
+//							msgCode = p;
+//							console.log('已存在msgCode: ' + p);
+//                            
+//							break;  //break in advance if hits the old hash
+//						}
+//					}	
+//					cb(err, hasMsgContent, msgCode);
+//				});
+/////////////////////
+//为了克服性能瓶颈  再引入另一个Hash 是HASH_MSG_POOL_KEY的Inverse映射 Field-Value位置对调 这样也能根据MsgContent快速查询出是否存在对应的MsgCode
+//空间换时间  在调用_setMsgCodeContentHash的同时 设定另一个Hash和HASH_MSG_POOL_KEY的Field-Value对称的Value-Field结构的Hash
+                var hasMsgContent = false;
+                client.HGET(HASH_MSG_POOL_INVERSE_KEY, msgContent, function(err, msgCode){
+                    if(msgCode){
+                        hasMsgContent = true;   
+                    }
+                    cb(err, hasMsgContent, msgCode);
+                });
 			},     //迭代结果传入下一层waterfall
 
 			//hasMsgContent/msgCode同步改变 -> false/null or true/***
@@ -120,15 +131,12 @@ var _getMsgCodeByContent = function(msgContent, prefix, callback){
 //						cb(err, result);		
 //					});  //根据HLEN-prefix生成新msgCode
 
-                    //不再和hlen关联  观察数据后发现hash field有莫名的跳空 -> Bug新值HSETNX不进去
+                    //不再和HLEN结果关联  观察数据后发现hash field的数字index有莫名其妙的跳空 -> Bug: 新值HSETNX不进去  详见db01:/var/lib/redis/README.md 说明
                     cb(null, prefix + randomString());
 				}
 			},
 				
 			], function(err, result){
-    //            if(result === 'N72829'){
-    //                    console.log('N72829对应的内容: ' + msgContent);    
-    //            }
 				callback(result);
 			}
 		); // End of async.waterfall
@@ -144,14 +152,25 @@ function randomString(){
 };
 
 var _setMsgCodeContentHash = function(msgCode, msgContent, callback){
-	client.HSETNX(HASH_MSG_POOL_KEY, msgCode, msgContent, function(err, result){
-		//事实上只可能返回result=0/1, 永远不可能有Error
-        //Bug
-        //很有可能出在这里!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		var detail = err ? 'Error ...' : (result ? 'Set-New-MsgCode' : 'MsgCode-Exists-Already');
-        console.log('_setMsgCodeContentHash的结果: ' + msgCode + ' - ' + msgContent + ' - ' + detail);
-		callback(detail);
-	});
+//空间换时间  在调用_setMsgCodeContentHash的同时 设定另一个Hash和HASH_MSG_POOL_KEY的Field-Value对称的Value-Field结构的Hash
+    async.parallel({
+            'Code_Content_Style_Hash' : function(cb){
+                client.HSETNX(HASH_MSG_POOL_KEY, msgCode, msgContent, function(err, result){
+		            //事实上只可能返回result=0/1, 永远不可能有Error
+		            var detail = err ? 'Error ...' : (result ? 'Set-New-MsgCode-MsgContent' : 'MsgCode-Exists-Already');
+		            cb(detail);
+	            });            
+            },
+            'Content_Code_Style_Hash' : function(cb){
+                client.HSETNX(HASH_MSG_POOL_INVERSE_KEY, msgContent, msgCode, function(err, result){
+                    var detail = err ? 'Error ...' : (result ? 'Set-New-MsgContent-MsgCode' : 'MsgCode-Exists-Already');  
+                    cb(detail);
+                });
+            }
+        }, function(err, result){
+            console.log('_setMsgCodeContentHash的结果: ' + JSON.stringify(result));
+            callback(result);
+        });
 };
 
 //批量插入, 给N个号码插入同一个msgCode
