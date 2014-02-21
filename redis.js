@@ -168,7 +168,7 @@ var _setMsgCodeContentHash = function(msgCode, msgContent, callback){
                 });
             }
         }, function(err, result){
-            console.log('_setMsgCodeContentHash的结果: ' + JSON.stringify(result));
+            console.log('_set两个Hash的结果: ' + JSON.stringify(result));
             callback(result);
         });
 };
@@ -199,6 +199,8 @@ var _setMsgCodeContentHash = function(msgCode, msgContent, callback){
 //	}
 //};
 
+
+//每次都把内容当成UNREADED  不能滥用   --deprecated already
 var _zaddMsgCodeToNumbers = function(numbers, msgCode, callback){
 	if(numbers.constructor === Array && msgCode.constructor == String){
 		var score = timeUtil.getElapsedMinutesSince();

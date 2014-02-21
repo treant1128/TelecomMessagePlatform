@@ -110,7 +110,7 @@ app.post('/addMultiMission', function(req, res){
 });
 
 //每次只针对一个号码只插入一条消息(查询Oracle的结果), 
-//可以做出Dnode形式的RPC, 只是用HTTP测试的...
+//可以做出Dnode形式的RPC, 只是用HTTP测试的...      ------deprecated already
 app.post('/insertSingleTask', function(req, res){
 	var prefix = req.body.prefix;
 	var msgContent = req.body.msgContent;

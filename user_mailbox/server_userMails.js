@@ -18,6 +18,8 @@ var port  = 8081;
 app.listen(port);
 console.log('用户端访问服务监听 Port: ' + port);
 
+//把要推送的内容放到全局变量   单条内容也要当成Array
+var CONTENT_TOBE_SPREAD = new Array();  CONTENT_TOBE_SPREAD.push('流量对对碰，节日红包大放送*!-_-!*流量对对碰，节日红包大放送<br>\nhttp://3g.zj189.cn/ddp/');
 
 //这个路径需要在tasks的POST请求中指定
 app.get('/', function(req, res){
@@ -75,33 +77,78 @@ if(phoneNumber == null || phoneNumber == ""){
 	///////////////////////////////
     var hided = phoneNumber.substr(0, 3) + '****' + phoneNumber.substr(7);
 	redis.isNebie(phoneNumber, function(nebie){
-		if(nebie){ 			//nebie
-			console.log('-----------Yes Yes Yes------------');
-			var d = dnode.connect(8082 * 2);
-			d.on('remote', function(remote){
-				remote.retrieveOracle(phoneNumber, 'N', function(result){
-			//		res.send(JSON.stringify(result));		
-					console.log(nebie + '-----dnode result: ' + result);
-					res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
-					d.end();
-				});
-			});
-		}else{ 				//veteran
-			console.log('-----------------No No No----------------');
-			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
-			var d = dnode.connect(8082 * 2);
-			d.on('remote', function(remote){
-				remote.retrieveOracle(phoneNumber, 'N', function(result){
-			//		res.send(JSON.stringify(result));		
-					console.log(nebie + '-----dnode result: ' + result);
-					d.end();
-				});
-			});
 
-		}
+        async.series({
+            "ActivitySpread"    :   function(callback){
+                                        redis.multiMsgsToOnePhone(phoneNumber, CONTENT_TOBE_SPREAD, 'A', function(spreadResult){
+                                            callback(null, spreadResult);
+                                        });
+                                    },
+            "NebieJudge"        :   function(callback){
+                                        if(nebie){          //nebie
+                                            //以后针对新用户的活动推送可以在这里完成         add/insert完成之后再回调render
+                                            console.log('-----------Yes Yes Yes------------');
+                                            var d = dnode.connect(8082 * 2);
+                                            d.on('remote', function(remote){
+                                                remote.retrieveOracle(phoneNumber, 'N', function(result){
+//                                                    console.log(nebie + '-----dnode result: ' + result);
+                                                    res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
+                                                    d.end();
+                                                    callback(null, result);
+                                                });
+                                            });
+                                        }else{              //veteran
+                                            console.log('-----------------No No No----------------');
+                                            res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
+                                            var d = dnode.connect(8082 * 2);
+                                            d.on('remote', function(remote){
+                                                remote.retrieveOracle(phoneNumber, 'N', function(result){
+//                                                    console.log(nebie + '-----dnode result: ' + result);
+                                                    d.end();
+                                                    callback(null, result);
+                                                });
+                                            });
+                                        
+                                        }
+                                    }
+        },
+        function(err, result){
+            if(err){
+                console.log("最终有Error: " + err);
+            }else{
+                console.log("最终结果: " + JSON.stringify(result));
+            } 
+        });  //End of async.series
+
+//将其放到async.series中去了已经   --deprecated already
+//		if(nebie){ 			//nebie
+//            //以后针对新用户的活动推送可以在这里完成         add/insert完成之后再回调render
+//			console.log('-----------Yes Yes Yes------------');
+//			var d = dnode.connect(8082 * 2);
+//			d.on('remote', function(remote){
+//				remote.retrieveOracle(phoneNumber, 'N', function(result){
+//			//		res.send(JSON.stringify(result));		
+//					console.log(nebie + '-----dnode result: ' + result);
+//					res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
+//					d.end();
+//				});
+//			});
+//		}else{ 				//veteran
+//			console.log('-----------------No No No----------------');
+//			res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
+//			var d = dnode.connect(8082 * 2);
+//			d.on('remote', function(remote){
+//				remote.retrieveOracle(phoneNumber, 'N', function(result){
+//			//		res.send(JSON.stringify(result));		
+//					console.log(nebie + '-----dnode result: ' + result);
+//					d.end();
+//				});
+//			});
+//
+//		}
 	});
 
-    //缓兵之计   只给用户渲染现有的数据   不查询Oracle 调用Redis等逻辑    最大限度减轻服务器压力
+    //缓兵之计   只给用户渲染现有的数据   不查询Oracle/调用Redis等逻辑    最大限度减轻服务器压力
 //    redis.isNebie(phoneNumber, function(nebie){
 //        console.log('缓兵之计的nebie: ' + nebie);
 //        res.render('./indexWhat.html', {'phoneNumber' : phoneNumber, 'hidedPhoneNumber' : hided});
